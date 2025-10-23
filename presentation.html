@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агрокомплекс в Старой Руссе - Презентация</title>
+    <meta name="description" content="Презентация бизнес-плана агрокомплекса для инвесторов и госструктур">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
+    <link rel="stylesheet" href="css/print.css">
+</head>
+<body class="presentation">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>Агрокомплекс - Презентация</span>
+            </div>
+            <div class="nav-actions">
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-home"></i>
+                    На главную
+                </a>
+                <button onclick="window.print()" class="btn btn-primary">
+                    <i class="fas fa-print"></i>
+                    Печать PDF
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Title Slide -->
+    <section class="slide title-slide">
+        <div class="slide-content">
+            <div class="title-header">
+                <div class="title-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h1>Агрокомплекс в Старой Руссе</h1>
+                <h2>Бизнес-план 2026-2030</h2>
+            </div>
+            <div class="title-stats">
+                <div class="stat-highlight">
+                    <div class="stat-number">457%</div>
+                    <div class="stat-label">ROI</div>
+                </div>
+                <div class="stat-highlight">
+                    <div class="stat-number">130</div>
+                    <div class="stat-label">млн руб прибыли</div>
+                </div>
+                <div class="stat-highlight">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">рабочих мест</div>
+                </div>
+            </div>
+            <div class="title-footer">
+                <p>Высокорентабельное агропредприятие с диверсифицированным производством</p>
+                <p class="date">Декабрь 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">Исполнительное резюме</h1>
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Ключевые показатели</h3>
+                    <ul>
+                        <li><strong>Общая площадь:</strong> 92,5 га</li>
+                        <li><strong>Инвестиции:</strong> 28,5 млн руб</li>
+                        <li><strong>Субсидии:</strong> 22,7 млн руб</li>
+                        <li><strong>Прибыль за 5 лет:</strong> 130,0 млн руб</li>
+                        <li><strong>ROI:</strong> 457%</li>
+                        <li><strong>Срок окупаемости:</strong> 2-3 года</li>
+                    </ul>
+                </div>
+                <div class="summary-card">
+                    <h3>Направления бизнеса</h3>
+                    <ul>
+                        <li><strong>Клубника:</strong> 6 га, 66,6 млн руб прибыли</li>
+                        <li><strong>Овощи:</strong> 35,5 га, 53,2 млн руб прибыли</li>
+                        <li><strong>Кустарники:</strong> 7 га, 10,3 млн руб прибыли</li>
+                        <li><strong>Сады:</strong> 50 га, 17,5 млн руб прибыли</li>
+                    </ul>
+                </div>
+                <div class="summary-card">
+                    <h3>Социальный эффект</h3>
+                    <ul>
+                        <li><strong>Рабочие места:</strong> 50+ человек</li>
+                        <li><strong>Налоговые поступления:</strong> 13,6 млн руб</li>
+                        <li><strong>Развитие региона:</strong> эффективное использование земель</li>
+                        <li><strong>Господдержка:</strong> 22,7 млн руб субсидий</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Overview -->
+    <section class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">Финансовые показатели</h1>
+            <div class="financial-overview">
+                <div class="financial-chart">
+                    <h3>Прибыль по годам</h3>
+                    <canvas id="presentationProfitChart"></canvas>
+                </div>
+                <div class="financial-summary">
+                    <h3>Ключевые финансовые показатели</h3>
+                    <div class="metric-grid">
+                        <div class="metric">
+                            <div class="metric-value">130,0</div>
+                            <div class="metric-unit">млн руб</div>
+                            <div class="metric-label">Общая прибыль за 5 лет</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">457</div>
+                            <div class="metric-unit">%</div>
+                            <div class="metric-label">ROI</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2-3</div>
+                            <div class="metric-unit">года</div>
+                            <div class="metric-label">Срок окупаемости</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3,8</div>
+                            <div class="metric-unit">%</div>
+                            <div class="metric-label">Эффективная налоговая ставка</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Structure -->
+    <section class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">Структура инвестиций</h1>
+            <div class="investment-overview">
+                <div class="investment-chart">
+                    <canvas id="presentationInvestmentChart"></canvas>
+                </div>
+                <div class="investment-details">
+                    <h3>Детализация инвестиций</h3>
+                    <table class="investment-table">
+                        <thead>
+                            <tr>
+                                <th>Направление</th>
+                                <th>Сумма (млн руб)</th>
+                                <th>Доля (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Основные средства</td>
+                                <td>14,7</td>
+                                <td>32,4%</td>
+                            </tr>
+                            <tr>
+                                <td>Сады (саженцы)</td>
+                                <td>15,0</td>
+                                <td>33,1%</td>
+                            </tr>
+                            <tr>
+                                <td>Кустарники (саженцы)</td>
+                                <td>10,57</td>
+                                <td>23,3%</td>
+                            </tr>
+                            <tr>
+                                <td>Клубника (рассада)</td>
+                                <td>4,0</td>
+                                <td>8,8%</td>
+                            </tr>
+                            <tr>
+                                <td>Овощи</td>
+                                <td>0</td>
+                                <td>0%</td>
+                            </tr>
+                            <tr class="total">
+                                <td><strong>ИТОГО</strong></td>
+                                <td><strong>44,27</strong></td>
+                                <td><strong>100%</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Directions -->
+    <section class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">Направления бизнеса</h1>
+            <div class="directions-grid">
+                <div class="direction-card">
+                    <div class="direction-header">
+                        <div class="direction-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Клубника</h3>
+                        <span class="area">6 га</span>
+                    </div>
+                    <div class="direction-metrics">
+                        <div class="metric">
+                            <span class="metric-value">66,6</span>
+                            <span class="metric-unit">млн руб</span>
+                            <span class="metric-label">прибыль за 5 лет</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">150</span>
+                            <span class="metric-unit">%</span>
+                            <span class="metric-label">рентабельность</span>
+                        </div>
+                    </div>
+                    <p>Быстрая окупаемость, стабильная прибыль с 2-го года</p>
+                </div>
+
+                <div class="direction-card">
+                    <div class="direction-header">
+                        <div class="direction-icon">
+                            <i class="fas fa-carrot"></i>
+                        </div>
+                        <h3>Овощи</h3>
+                        <span class="area">35,5 га</span>
+                    </div>
+                    <div class="direction-metrics">
+                        <div class="metric">
+                            <span class="metric-value">53,2</span>
+                            <span class="metric-unit">млн руб</span>
+                            <span class="metric-label">прибыль за 5 лет</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">172</span>
+                            <span class="metric-unit">%</span>
+                            <span class="metric-label">рентабельность</span>
+                        </div>
+                    </div>
+                    <p>Стабильная прибыль с первого года, 9 культур</p>
+                </div>
+
+                <div class="direction-card">
+                    <div class="direction-header">
+                        <div class="direction-icon">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <h3>Кустарники</h3>
+                        <span class="area">7 га</span>
+                    </div>
+                    <div class="direction-metrics">
+                        <div class="metric">
+                            <span class="metric-value">10,3</span>
+                            <span class="metric-unit">млн руб</span>
+                            <span class="metric-label">прибыль за 5 лет</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">2612</span>
+                            <span class="metric-unit">%</span>
+                            <span class="metric-label">рентабельность</span>
+                        </div>
+                    </div>
+                    <p>Долгосрочные инвестиции, плодоношение с 3-го года</p>
+                </div>
+
+                <div class="direction-card">
+                    <div class="direction-header">
+                        <div class="direction-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3>Сады</h3>
+                        <span class="area">50 га</span>
+                    </div>
+                    <div class="direction-metrics">
+                        <div class="metric">
+                            <span class="metric-value">17,5</span>
+                            <span class="metric-unit">млн руб</span>
+                            <span class="metric-label">прибыль за 5 лет</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">1676</span>
+                            <span class="metric-unit">%</span>
+                            <span class="metric-label">рентабельность</span>
+                        </div>
+                    </div>
+                    <p>Крупномасштабные инвестиции, максимальная прибыль</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Impact -->
+    <section class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">Социальная значимость</h1>
+            <div class="social-impact-grid">
+                <div class="social-card">
+                    <div class="social-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Рабочие места</h3>
+                    <div class="social-number">50+</div>
+                    <p>Создание постоянных и сезонных рабочих мест для местного населения</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                    <h3>Налоговые поступления</h3>
+                    <div class="social-number">13,6</div>
+                    <p>млн руб налогов за 5 лет в бюджет региона</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Развитие региона</h3>
+                    <div class="social-number">92,5</div>
+                    <p>га эффективного использования сельхозземель</p>
+                </div>
+                <div class="social-card">
+                    <div class="social-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Господдержка</h3>
+                    <div class="social-number">22,7</div>
+                    <p>млн руб субсидий для развития сельского хозяйства</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Proposal -->
+    <section class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">Инвестиционное предложение</h1>
+            <div class="proposal-content">
+                <div class="proposal-highlights">
+                    <h3>Ключевые преимущества</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Высокая рентабельность</strong> - ROI 457% за 5 лет</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Низкие риски</strong> - субсидии покрывают 80% инвестиций</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Быстрая окупаемость</strong> - 2-3 года</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Диверсификация</strong> - 4 направления снижают риски</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Государственная поддержка</strong> - 22,7 млн руб субсидий</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Социальный эффект</strong> - 50+ рабочих мест</li>
+                    </ul>
+                </div>
+                <div class="proposal-financials">
+                    <h3>Финансовые показатели</h3>
+                    <div class="financial-metrics">
+                        <div class="financial-metric">
+                            <div class="metric-value">28,5</div>
+                            <div class="metric-unit">млн руб</div>
+                            <div class="metric-label">Чистые инвестиции</div>
+                        </div>
+                        <div class="financial-metric">
+                            <div class="metric-value">130,0</div>
+                            <div class="metric-unit">млн руб</div>
+                            <div class="metric-label">Прибыль за 5 лет</div>
+                        </div>
+                        <div class="financial-metric">
+                            <div class="metric-value">457</div>
+                            <div class="metric-unit">%</div>
+                            <div class="metric-label">ROI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="slide">
+        <div class="slide-content">
+            <h1 class="slide-title">Контакты</h1>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Готовы к инвестированию?</h3>
+                    <p>Проект готов к реализации в 2026 году. Все расчеты проверены, документы подготовлены.</p>
+                    <div class="contact-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Полная документация</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Государственная поддержка</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Низкие риски</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Высокая рентабельность</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-actions">
+                    <a href="docs/business-plan.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i>
+                        Скачать полный бизнес-план
+                    </a>
+                    <a href="index.html" class="btn btn-secondary">
+                        <i class="fas fa-home"></i>
+                        На главную страницу
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script>
+        // Initialize presentation charts
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Chart !== 'undefined') {
+                initPresentationCharts();
+            }
+        });
+
+        function initPresentationCharts() {
+            // Presentation Profit Chart
+            const profitCtx = document.getElementById('presentationProfitChart');
+            if (profitCtx) {
+                new Chart(profitCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2026', '2027', '2028', '2029', '2030'],
+                        datasets: [{
+                            label: 'Прибыль (млн руб)',
+                            data: [-4.475, 25.295, 28.461, 37.911, 42.831],
+                            borderColor: '#2d5a27',
+                            backgroundColor: '#2d5a2720',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#2d5a27',
+                            pointBorderColor: '#ffffff',
+                            pointBorderWidth: 2,
+                            pointRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + ' млн';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Presentation Investment Chart
+            const investmentCtx = document.getElementById('presentationInvestmentChart');
+            if (investmentCtx) {
+                new Chart(investmentCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Основные средства', 'Сады', 'Кустарники', 'Клубника'],
+                        datasets: [{
+                            data: [14.7, 15.0, 10.57, 4.0],
+                            backgroundColor: ['#2d5a27', '#4a7c59', '#2563eb', '#10b981'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

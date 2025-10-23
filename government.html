@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для государственных структур | Агрокомплекс в Старой Руссе</title>
+    <meta name="description" content="Социальная значимость проекта для развития региона и создания рабочих мест">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>Агрокомплекс</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="financial-details.html">Финансы</a></li>
+                <li><a href="social-impact.html">Социальный эффект</a></li>
+                <li><a href="risk-analysis.html">Анализ рисков</a></li>
+                <li><a href="implementation-plan.html">План реализации</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span>Для госструктур</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero government-hero">
+        <div class="container">
+            <h1>Развитие сельского хозяйства в Новгородской области</h1>
+            <p>Создание высокотехнологичного агрокомплекса для развития региона и создания рабочих мест</p>
+        </div>
+    </section>
+
+    <!-- Social Impact Overview -->
+    <section class="social-impact-overview">
+        <div class="container">
+            <h2 class="section-title">Социальная значимость проекта</h2>
+            <div class="impact-cards">
+                <div class="impact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Создание рабочих мест</h3>
+                    <div class="metric-value">50+</div>
+                    <div class="metric-unit">человек</div>
+                    <p>Постоянные и сезонные рабочие места для местного населения</p>
+                </div>
+                <div class="impact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                    <h3>Налоговые поступления</h3>
+                    <div class="metric-value">13,6</div>
+                    <div class="metric-unit">млн руб</div>
+                    <p>Налогов в бюджет региона за 5 лет</p>
+                </div>
+                <div class="impact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Развитие региона</h3>
+                    <div class="metric-value">92,5</div>
+                    <div class="metric-unit">га</div>
+                    <p>Эффективного использования сельхозземель</p>
+                </div>
+                <div class="impact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>Господдержка</h3>
+                    <div class="metric-value">22,7</div>
+                    <div class="metric-unit">млн руб</div>
+                    <p>Субсидий для развития сельского хозяйства</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Development -->
+    <section class="regional-development">
+        <div class="container">
+            <h2 class="section-title">Вклад в развитие региона</h2>
+            <div class="development-content">
+                <div class="development-chart">
+                    <canvas id="regionalDevelopmentChart"></canvas>
+                </div>
+                <div class="development-details">
+                    <h3>Ключевые направления развития</h3>
+                    <div class="development-areas">
+                        <div class="development-area">
+                            <h4>Экономическое развитие</h4>
+                            <ul>
+                                <li>Создание 50+ рабочих мест</li>
+                                <li>Налоговые поступления 13,6 млн руб</li>
+                                <li>Развитие агропромышленности</li>
+                                <li>Привлечение инвестиций</li>
+                            </ul>
+                        </div>
+                        <div class="development-area">
+                            <h4>Социальное развитие</h4>
+                            <ul>
+                                <li>Трудоустройство местного населения</li>
+                                <li>Повышение уровня жизни</li>
+                                <li>Обучение новым технологиям</li>
+                                <li>Развитие кадрового потенциала</li>
+                            </ul>
+                        </div>
+                        <div class="development-area">
+                            <h4>Инфраструктурное развитие</h4>
+                            <ul>
+                                <li>Создание транспортной инфраструктуры</li>
+                                <li>Развитие систем водоснабжения</li>
+                                <li>Создание логистических центров</li>
+                                <li>Развитие связи и коммуникаций</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employment Development -->
+    <section class="employment-development">
+        <div class="container">
+            <h2 class="section-title">Развитие занятости</h2>
+            <div class="employment-content">
+                <div class="employment-chart">
+                    <canvas id="employmentDevelopmentChart"></canvas>
+                </div>
+                <div class="employment-details">
+                    <h3>Структура занятости по годам</h3>
+                    <div class="employment-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2026</div>
+                            <div class="timeline-content">
+                                <h4>Стартовый этап</h4>
+                                <div class="employment-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Постоянный персонал:</span>
+                                        <span class="stat-value">11 человек</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Сезонный персонал:</span>
+                                        <span class="stat-value">до 15 человек</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Общие затраты на персонал:</span>
+                                        <span class="stat-value">12,1 млн руб</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2027</div>
+                            <div class="timeline-content">
+                                <h4>Расширение</h4>
+                                <div class="employment-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Постоянный персонал:</span>
+                                        <span class="stat-value">16 человек</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Сезонный персонал:</span>
+                                        <span class="stat-value">до 25 человек</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Общие затраты на персонал:</span>
+                                        <span class="stat-value">18,4 млн руб</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2028-2030</div>
+                            <div class="timeline-content">
+                                <h4>Полная мощность</h4>
+                                <div class="employment-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Постоянный персонал:</span>
+                                        <span class="stat-value">24 человека</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Сезонный персонал:</span>
+                                        <span class="stat-value">до 35 человек</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Общие затраты на персонал:</span>
+                                        <span class="stat-value">30,0 млн руб/год</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tax Contributions -->
+    <section class="tax-contributions">
+        <div class="container">
+            <h2 class="section-title">Налоговые поступления в бюджет</h2>
+            <div class="tax-content">
+                <div class="tax-chart">
+                    <canvas id="taxContributionsChart"></canvas>
+                </div>
+                <div class="tax-details">
+                    <h3>Структура налоговых поступлений</h3>
+                    <div class="tax-breakdown">
+                        <div class="tax-item">
+                            <div class="tax-label">ЕСХН 6%</div>
+                            <div class="tax-amount">7,8 млн руб</div>
+                            <div class="tax-percentage">57%</div>
+                        </div>
+                        <div class="tax-item">
+                            <div class="tax-label">Страховые взносы</div>
+                            <div class="tax-amount">5,8 млн руб</div>
+                            <div class="tax-percentage">43%</div>
+                        </div>
+                    </div>
+                    <div class="tax-summary">
+                        <h4>Итого налогов за 5 лет: 13,6 млн руб</h4>
+                        <p>Среднегодовые налоговые поступления: 2,7 млн руб</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Support -->
+    <section class="government-support">
+        <div class="container">
+            <h2 class="section-title">Использование государственной поддержки</h2>
+            <div class="support-content">
+                <div class="support-overview">
+                    <h3>Субсидии на развитие сельского хозяйства</h3>
+                    <div class="support-stats">
+                        <div class="support-stat">
+                            <div class="stat-value">22,7</div>
+                            <div class="stat-unit">млн руб</div>
+                            <div class="stat-label">Общая сумма субсидий</div>
+                        </div>
+                        <div class="support-stat">
+                            <div class="stat-value">80</div>
+                            <div class="stat-unit">%</div>
+                            <div class="stat-label">Покрытие инвестиций</div>
+                        </div>
+                        <div class="support-stat">
+                            <div class="stat-value">510</div>
+                            <div class="stat-unit">тыс руб/га</div>
+                            <div class="stat-label">Субсидия на закладку</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="support-details">
+                    <h3>Направления использования субсидий</h3>
+                    <div class="support-directions">
+                        <div class="direction">
+                            <h4>Сады (50 га)</h4>
+                            <div class="direction-amount">19,45 млн руб</div>
+                            <p>Субсидии на закладку саженцев яблони, груши, сливы</p>
+                        </div>
+                        <div class="direction">
+                            <h4>Кустарники (7 га)</h4>
+                            <div class="direction-amount">2,72 млн руб</div>
+                            <p>Субсидии на закладку саженцев жимолости, голубики, малины, смородины</p>
+                        </div>
+                        <div class="direction">
+                            <h4>Клубника (2 га)</h4>
+                            <div class="direction-amount">0,54 млн руб</div>
+                            <p>Субсидии на закладку рассады клубники</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Environmental Impact -->
+    <section class="environmental-impact">
+        <div class="container">
+            <h2 class="section-title">Экологический эффект</h2>
+            <div class="environmental-grid">
+                <div class="environmental-card">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Экологичное производство</h3>
+                    <p>Использование современных экологически безопасных технологий выращивания</p>
+                    <ul>
+                        <li>Капельное орошение - экономия воды</li>
+                        <li>Биологические методы защиты растений</li>
+                        <li>Минимальная обработка почвы</li>
+                        <li>Использование органических удобрений</li>
+                    </ul>
+                </div>
+                <div class="environmental-card">
+                    <div class="card-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Переработка отходов</h3>
+                    <p>Создание системы переработки органических отходов</p>
+                    <ul>
+                        <li>Компостирование растительных остатков</li>
+                        <li>Использование отходов для удобрения</li>
+                        <li>Минимизация отходов производства</li>
+                        <li>Экологически безопасная утилизация</li>
+                    </ul>
+                </div>
+                <div class="environmental-card">
+                    <div class="card-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Водосбережение</h3>
+                    <p>Эффективное использование водных ресурсов</p>
+                    <ul>
+                        <li>Система капельного орошения</li>
+                        <li>Сбор и использование дождевой воды</li>
+                        <li>Мониторинг влажности почвы</li>
+                        <li>Оптимизация полива</li>
+                    </ul>
+                </div>
+                <div class="environmental-card">
+                    <div class="card-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Биоразнообразие</h3>
+                    <p>Создание благоприятной среды для развития биоразнообразия</p>
+                    <ul>
+                        <li>Смешанные посадки</li>
+                        <li>Создание зеленых коридоров</li>
+                        <li>Привлечение полезных насекомых</li>
+                        <li>Сохранение местных сортов</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to main -->
+    <section class="back-to-main">
+        <div class="container">
+            <div class="back-content">
+                <h3>Нужна дополнительная информация?</h3>
+                <p>Изучите другие разделы бизнес-плана для полного понимания проекта</p>
+                <div class="back-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        На главную
+                    </a>
+                    <a href="social-impact.html" class="btn btn-secondary">
+                        <i class="fas fa-users"></i>
+                        Социальный эффект
+                    </a>
+                    <a href="docs/business-plan.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i>
+                        Скачать бизнес-план
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Агрокомплекс в Старой Руссе</h4>
+                    <p>Высокорентабельное агропредприятие с ROI 457%</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="financial-details.html">Финансы</a></li>
+                        <li><a href="social-impact.html">Социальный эффект</a></li>
+                        <li><a href="risk-analysis.html">Анализ рисков</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="docs/business-plan.pdf" download>Бизнес-план PDF</a></li>
+                        <li><a href="presentation.html">Презентация</a></li>
+                        <li><a href="investors.html">Для инвесторов</a></li>
+                        <li><a href="implementation-plan.html">План реализации</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Агрокомплекс в Старой Руссе. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script>
+        // Initialize government page charts
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Chart !== 'undefined') {
+                initGovernmentCharts();
+            }
+        });
+
+        function initGovernmentCharts() {
+            // Regional Development Chart
+            const regionalDevelopmentCtx = document.getElementById('regionalDevelopmentChart');
+            if (regionalDevelopmentCtx) {
+                new Chart(regionalDevelopmentCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Рабочие места', 'Налоговые поступления', 'Площадь (га)', 'Субсидии'],
+                        datasets: [{
+                            label: 'Показатели развития региона',
+                            data: [50, 13.6, 92.5, 22.7],
+                            backgroundColor: ['#2d5a27', '#4a7c59', '#2563eb', '#10b981'],
+                            borderColor: ['#2d5a27', '#4a7c59', '#2563eb', '#10b981'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Employment Development Chart
+            const employmentDevelopmentCtx = document.getElementById('employmentDevelopmentChart');
+            if (employmentDevelopmentCtx) {
+                new Chart(employmentDevelopmentCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2026', '2027', '2028', '2029', '2030'],
+                        datasets: [
+                            {
+                                label: 'Постоянный персонал',
+                                data: [11, 16, 20, 24, 24],
+                                borderColor: '#2d5a27',
+                                backgroundColor: '#2d5a2720',
+                                borderWidth: 3,
+                                fill: true,
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Сезонный персонал',
+                                data: [15, 25, 30, 35, 35],
+                                borderColor: '#4a7c59',
+                                backgroundColor: '#4a7c5920',
+                                borderWidth: 3,
+                                fill: true,
+                                tension: 0.4
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 5
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Tax Contributions Chart
+            const taxContributionsCtx = document.getElementById('taxContributionsChart');
+            if (taxContributionsCtx) {
+                new Chart(taxContributionsCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['ЕСХН 6%', 'Страховые взносы'],
+                        datasets: [{
+                            data: [7.8, 5.8],
+                            backgroundColor: ['#2d5a27', '#4a7c59'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                        return context.label + ': ' + context.parsed + ' млн руб (' + percentage + '%)';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

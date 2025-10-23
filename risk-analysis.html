@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ рисков | Агрокомплекс в Старой Руссе</title>
+    <meta name="description" content="Детальный анализ рисков проекта и способы их минимизации">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>Агрокомплекс</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="financial-details.html">Финансы</a></li>
+                <li><a href="social-impact.html">Социальный эффект</a></li>
+                <li><a href="index.html#risks">Анализ рисков</a></li>
+                <li><a href="implementation-plan.html">План реализации</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span>Анализ рисков</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Анализ рисков и их минимизация</h1>
+            <p>Комплексный анализ всех видов рисков проекта и эффективные способы их снижения</p>
+        </div>
+    </section>
+
+    <!-- Risk Overview -->
+    <section class="risk-overview">
+        <div class="container">
+            <h2 class="section-title">Классификация рисков</h2>
+            <div class="risk-matrix">
+                <div class="risk-chart">
+                    <canvas id="riskMatrixChart"></canvas>
+                </div>
+                <div class="risk-legend">
+                    <h3>Уровни рисков</h3>
+                    <div class="legend-items">
+                        <div class="legend-item high">
+                            <div class="legend-color"></div>
+                            <span>Высокий риск</span>
+                        </div>
+                        <div class="legend-item medium">
+                            <div class="legend-color"></div>
+                            <span>Средний риск</span>
+                        </div>
+                        <div class="legend-item low">
+                            <div class="legend-color"></div>
+                            <span>Низкий риск</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Production Risks -->
+    <section class="production-risks">
+        <div class="container">
+            <h2 class="section-title">Производственные риски</h2>
+            <div class="risks-grid">
+                <div class="risk-card high">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-cloud-rain"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Погодные условия</h3>
+                            <div class="risk-level high">Высокий риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Заморозки, град, засуха могут снизить урожай на 30-50%</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Снижение урожайности на 30-50%</li>
+                                <li>Потеря части урожая</li>
+                                <li>Увеличение затрат на защиту</li>
+                                <li>Снижение качества продукции</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Страхование урожая от погодных рисков</li>
+                                <li><i class="fas fa-check"></i> Система мониторинга погоды</li>
+                                <li><i class="fas fa-check"></i> Защитные укрытия для теплолюбивых культур</li>
+                                <li><i class="fas fa-check"></i> Система полива для защиты от засухи</li>
+                                <li><i class="fas fa-check"></i> Диверсификация сроков посадки</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card medium">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Болезни и вредители</h3>
+                            <div class="risk-level medium">Средний риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Фитофтороз, серая гниль, долгоносик, клещи могут повредить урожай</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Снижение урожайности на 20-40%</li>
+                                <li>Ухудшение качества продукции</li>
+                                <li>Увеличение затрат на защиту</li>
+                                <li>Необходимость дополнительных обработок</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Профилактические обработки</li>
+                                <li><i class="fas fa-check"></i> Использование устойчивых сортов</li>
+                                <li><i class="fas fa-check"></i> Биологические методы защиты</li>
+                                <li><i class="fas fa-check"></i> Соблюдение севооборота</li>
+                                <li><i class="fas fa-check"></i> Мониторинг состояния растений</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card medium">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Качество посадочного материала</h3>
+                            <div class="risk-level medium">Средний риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Некачественная рассада и саженцы могут снизить урожайность</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Снижение урожайности на 15-30%</li>
+                                <li>Увеличение затрат на замену</li>
+                                <li>Задержка в развитии растений</li>
+                                <li>Снижение качества продукции</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Работа с проверенными поставщиками</li>
+                                <li><i class="fas fa-check"></i> Контроль качества при закупке</li>
+                                <li><i class="fas fa-check"></i> Собственное производство рассады</li>
+                                <li><i class="fas fa-check"></i> Договоры с гарантиями качества</li>
+                                <li><i class="fas fa-check"></i> Резервный фонд на замену</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card low">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Технические сбои</h3>
+                            <div class="risk-level low">Низкий риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Поломка оборудования, сбои в системе полива</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Временная остановка работ</li>
+                                <li>Затраты на ремонт</li>
+                                <li>Снижение эффективности</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Регулярное техническое обслуживание</li>
+                                <li><i class="fas fa-check"></i> Резервное оборудование</li>
+                                <li><i class="fas fa-check"></i> Договоры на сервисное обслуживание</li>
+                                <li><i class="fas fa-check"></i> Обучение персонала</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Risks -->
+    <section class="market-risks">
+        <div class="container">
+            <h2 class="section-title">Рыночные риски</h2>
+            <div class="risks-grid">
+                <div class="risk-card medium">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Колебания цен</h3>
+                            <div class="risk-level medium">Средний риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Цены на продукцию могут колебаться в пределах ±20%</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Снижение выручки на 20%</li>
+                                <li>Снижение рентабельности</li>
+                                <li>Необходимость корректировки планов</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Долгосрочные контракты с покупателями</li>
+                                <li><i class="fas fa-check"></i> Диверсификация каналов сбыта</li>
+                                <li><i class="fas fa-check"></i> Прямые продажи (исключение посредников)</li>
+                                <li><i class="fas fa-check"></i> Переработка продукции (добавленная стоимость)</li>
+                                <li><i class="fas fa-check"></i> Мониторинг рыночных цен</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card low">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Конкуренция</h3>
+                            <div class="risk-level low">Низкий риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Появление новых конкурентов на рынке</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Снижение доли рынка</li>
+                                <li>Давление на цены</li>
+                                <li>Необходимость дифференциации</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Высокое качество продукции</li>
+                                <li><i class="fas fa-check"></i> Уникальные сорта и технологии</li>
+                                <li><i class="fas fa-check"></i> Прямые отношения с покупателями</li>
+                                <li><i class="fas fa-check"></i> Брендинг и маркетинг</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card low">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Сезонность спроса</h3>
+                            <div class="risk-level low">Низкий риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Пик спроса в летний период, снижение в зимний</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Неравномерность продаж</li>
+                                <li>Необходимость хранения</li>
+                                <li>Сезонные колебания цен</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Инвестиции в хранение</li>
+                                <li><i class="fas fa-check"></i> Переработка продукции</li>
+                                <li><i class="fas fa-check"></i> Контракты на поставку</li>
+                                <li><i class="fas fa-check"></i> Диверсификация культур</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Risks -->
+    <section class="financial-risks">
+        <div class="container">
+            <h2 class="section-title">Финансовые риски</h2>
+            <div class="risks-grid">
+                <div class="risk-card high">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Убыток в первый год</h3>
+                            <div class="risk-level high">Высокий риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Убыток -4,5 млн руб в первый год из-за больших инвестиций</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Нехватка оборотных средств</li>
+                                <li>Необходимость дополнительного финансирования</li>
+                                <li>Давление на денежный поток</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Резервный фонд 5-6 млн руб</li>
+                                <li><i class="fas fa-check"></i> Кредитная линия 15 млн руб</li>
+                                <li><i class="fas fa-check"></i> Поэтапная реализация проекта</li>
+                                <li><i class="fas fa-check"></i> Приоритет на быструю окупаемость</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card medium">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Длительный период окупаемости</h3>
+                            <div class="risk-level medium">Средний риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Сады и кустарники начинают плодоносить через 3-4 года</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Длительное вложение средств</li>
+                                <li>Отложенная отдача</li>
+                                <li>Необходимость терпения</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Параллельное развитие быстрых направлений</li>
+                                <li><i class="fas fa-check"></i> Использование субсидий</li>
+                                <li><i class="fas fa-check"></i> Поэтапные инвестиции</li>
+                                <li><i class="fas fa-check"></i> Долгосрочное планирование</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-card low">
+                    <div class="risk-header">
+                        <div class="risk-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="risk-info">
+                            <h3>Рост процентных ставок</h3>
+                            <div class="risk-level low">Низкий риск</div>
+                        </div>
+                    </div>
+                    <div class="risk-content">
+                        <p><strong>Описание:</strong> Увеличение стоимости кредитов</p>
+                        <div class="risk-impact">
+                            <h4>Воздействие:</h4>
+                            <ul>
+                                <li>Увеличение финансовых затрат</li>
+                                <li>Снижение рентабельности</li>
+                            </ul>
+                        </div>
+                        <div class="risk-mitigation">
+                            <h4>Способы минимизации:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Фиксация процентных ставок</li>
+                                <li><i class="fas fa-check"></i> Досрочное погашение кредитов</li>
+                                <li><i class="fas fa-check"></i> Использование собственных средств</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Management Strategy -->
+    <section class="risk-management">
+        <div class="container">
+            <h2 class="section-title">Стратегия управления рисками</h2>
+            <div class="strategy-content">
+                <div class="strategy-chart">
+                    <canvas id="riskManagementChart"></canvas>
+                </div>
+                <div class="strategy-details">
+                    <h3>Комплексный подход к управлению рисками</h3>
+                    <div class="strategy-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Идентификация рисков</h4>
+                                <p>Систематическое выявление всех возможных рисков проекта</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Анализ и оценка</h4>
+                                <p>Определение вероятности и воздействия каждого риска</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Разработка мер</h4>
+                                <p>Создание планов минимизации для каждого риска</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Мониторинг и контроль</h4>
+                                <p>Постоянное отслеживание и корректировка мер</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance -->
+    <section class="insurance">
+        <div class="container">
+            <h2 class="section-title">Страхование рисков</h2>
+            <div class="insurance-content">
+                <div class="insurance-types">
+                    <div class="insurance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-cloud-rain"></i>
+                        </div>
+                        <h3>Страхование урожая</h3>
+                        <p>Защита от погодных рисков и стихийных бедствий</p>
+                        <ul>
+                            <li>Заморозки и град</li>
+                            <li>Засуха и наводнения</li>
+                            <li>Ураганы и штормы</li>
+                            <li>Пожары</li>
+                        </ul>
+                    </div>
+                    <div class="insurance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Страхование оборудования</h3>
+                        <p>Защита от поломок и повреждений техники</p>
+                        <ul>
+                            <li>Тракторы и сельхозтехника</li>
+                            <li>Система полива</li>
+                            <li>Холодильное оборудование</li>
+                            <li>Транспорт</li>
+                        </ul>
+                    </div>
+                    <div class="insurance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Страхование имущества</h3>
+                        <p>Защита зданий и сооружений</p>
+                        <ul>
+                            <li>Склады и помещения</li>
+                            <li>Парники и теплицы</li>
+                            <li>Система водоснабжения</li>
+                            <li>Ограждения и ворота</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to main -->
+    <section class="back-to-main">
+        <div class="container">
+            <div class="back-content">
+                <h3>Готовы к реализации?</h3>
+                <p>Изучите план реализации проекта и начните подготовку</p>
+                <div class="back-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        На главную
+                    </a>
+                    <a href="implementation-plan.html" class="btn btn-secondary">
+                        <i class="fas fa-tasks"></i>
+                        План реализации
+                    </a>
+                    <a href="docs/business-plan.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i>
+                        Скачать бизнес-план
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Агрокомплекс в Старой Руссе</h4>
+                    <p>Высокорентабельное агропредприятие с ROI 457%</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="financial-details.html">Финансы</a></li>
+                        <li><a href="social-impact.html">Социальный эффект</a></li>
+                        <li><a href="implementation-plan.html">План реализации</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="docs/business-plan.pdf" download>Бизнес-план PDF</a></li>
+                        <li><a href="presentation.html">Презентация</a></li>
+                        <li><a href="government.html">Для госструктур</a></li>
+                        <li><a href="investors.html">Для инвесторов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Агрокомплекс в Старой Руссе. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script>
+        // Initialize risk analysis charts
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Chart !== 'undefined') {
+                initRiskAnalysisCharts();
+            }
+        });
+
+        function initRiskAnalysisCharts() {
+            // Risk Matrix Chart
+            const riskMatrixCtx = document.getElementById('riskMatrixChart');
+            if (riskMatrixCtx) {
+                new Chart(riskMatrixCtx, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [
+                            {
+                                label: 'Производственные риски',
+                                data: [
+                                    {x: 8, y: 7, label: 'Погодные условия'},
+                                    {x: 6, y: 5, label: 'Болезни и вредители'},
+                                    {x: 5, y: 4, label: 'Качество посадочного материала'},
+                                    {x: 3, y: 3, label: 'Технические сбои'}
+                                ],
+                                backgroundColor: '#ef4444',
+                                borderColor: '#ef4444',
+                                pointRadius: 8
+                            },
+                            {
+                                label: 'Рыночные риски',
+                                data: [
+                                    {x: 6, y: 5, label: 'Колебания цен'},
+                                    {x: 4, y: 3, label: 'Конкуренция'},
+                                    {x: 3, y: 2, label: 'Сезонность спроса'}
+                                ],
+                                backgroundColor: '#f59e0b',
+                                borderColor: '#f59e0b',
+                                pointRadius: 8
+                            },
+                            {
+                                label: 'Финансовые риски',
+                                data: [
+                                    {x: 8, y: 6, label: 'Убыток в первый год'},
+                                    {x: 5, y: 4, label: 'Длительный период окупаемости'},
+                                    {x: 4, y: 3, label: 'Рост процентных ставок'}
+                                ],
+                                backgroundColor: '#10b981',
+                                borderColor: '#10b981',
+                                pointRadius: 8
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: function(context) {
+                                        return context[0].raw.label;
+                                    },
+                                    label: function(context) {
+                                        return 'Вероятность: ' + context.parsed.x + '/10, Воздействие: ' + context.parsed.y + '/10';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Вероятность (1-10)'
+                                },
+                                min: 0,
+                                max: 10
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Воздействие (1-10)'
+                                },
+                                min: 0,
+                                max: 10
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Risk Management Chart
+            const riskManagementCtx = document.getElementById('riskManagementChart');
+            if (riskManagementCtx) {
+                new Chart(riskManagementCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Предотвращение', 'Снижение', 'Передача', 'Принятие'],
+                        datasets: [{
+                            data: [40, 35, 20, 5],
+                            backgroundColor: ['#2d5a27', '#4a7c59', '#2563eb', '#f59e0b'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.label + ': ' + context.parsed + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

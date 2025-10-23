@@ -1,0 +1,567 @@
+/* Additional styles for specific pages */
+
+/* Breadcrumbs */
+.breadcrumbs {
+    background: var(--light-gray);
+    padding: var(--spacing-md) 0;
+    margin-top: 70px; /* Account for fixed navbar */
+}
+
+.breadcrumbs .container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--gray);
+}
+
+.breadcrumbs a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: var(--secondary-green);
+}
+
+.breadcrumbs span {
+    color: var(--gray);
+}
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    color: var(--white);
+    padding: var(--spacing-3xl) 0;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+}
+
+.page-hero p {
+    font-size: var(--font-size-lg);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.government-hero {
+    background: linear-gradient(135deg, var(--accent-blue) 0%, var(--light-blue) 100%);
+}
+
+.investors-hero {
+    background: linear-gradient(135deg, var(--success) 0%, #059669 100%);
+}
+
+/* Financial Overview */
+.financial-overview {
+    background: var(--light-gray);
+}
+
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.overview-card {
+    background: var(--white);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.overview-card .card-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.overview-card .card-icon i {
+    font-size: var(--font-size-2xl);
+    color: var(--white);
+}
+
+.overview-card h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-green);
+}
+
+.overview-card .metric-value {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xs);
+}
+
+.overview-card .metric-unit {
+    font-size: var(--font-size-sm);
+    color: var(--gray);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Profit Table */
+.profit-table {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    margin-top: var(--spacing-xl);
+}
+
+.profit-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profit-table th,
+.profit-table td {
+    padding: var(--spacing-md);
+    text-align: right;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.profit-table th {
+    background: var(--light-gray);
+    font-weight: 600;
+    color: var(--primary-green);
+    text-align: left;
+}
+
+.profit-table td:first-child,
+.profit-table th:first-child {
+    text-align: left;
+}
+
+.profit-table .total {
+    background: var(--light-gray);
+    font-weight: 600;
+}
+
+.profit-table .total td {
+    border-top: 2px solid var(--primary-green);
+}
+
+/* Investment Structure */
+.investment-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.investment-chart {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.investment-chart h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+    text-align: center;
+}
+
+.investment-chart canvas {
+    max-height: 300px;
+}
+
+.investment-details h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+}
+
+.investment-categories {
+    display: grid;
+    gap: var(--spacing-xl);
+}
+
+.category {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.category h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-green);
+}
+
+.category-amount {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.category li:last-child {
+    border-bottom: none;
+}
+
+/* Cash Flow */
+.cashflow-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.cashflow-chart {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.cashflow-chart h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+    text-align: center;
+}
+
+.cashflow-chart canvas {
+    max-height: 300px;
+}
+
+.cashflow-details h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+}
+
+.period-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.period-card h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-green);
+}
+
+.period-stats {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.period-stats .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.period-stats .stat:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    font-weight: 500;
+    color: var(--gray);
+}
+
+.stat-value {
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.stat-value.danger {
+    color: var(--danger);
+}
+
+.stat-value.success {
+    color: var(--success);
+}
+
+/* Tax Analysis */
+.tax-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.tax-overview {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.tax-overview h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+}
+
+.tax-benefits {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.benefit i {
+    color: var(--success);
+    font-size: var(--font-size-lg);
+    margin-top: var(--spacing-xs);
+}
+
+.benefit h4 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-green);
+}
+
+.benefit p {
+    color: var(--gray);
+    font-size: var(--font-size-sm);
+}
+
+.tax-table {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.tax-table h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+}
+
+.tax-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tax-table th,
+.tax-table td {
+    padding: var(--spacing-sm);
+    text-align: right;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.tax-table th {
+    background: var(--light-gray);
+    font-weight: 600;
+    color: var(--primary-green);
+    text-align: left;
+}
+
+.tax-table td:first-child,
+.tax-table th:first-child {
+    text-align: left;
+}
+
+.tax-table .summary {
+    background: var(--light-gray);
+    font-weight: 600;
+}
+
+.tax-table .summary td {
+    border-top: 2px solid var(--primary-green);
+}
+
+/* ROI Analysis */
+.roi-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+}
+
+.roi-chart {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.roi-chart h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+    text-align: center;
+}
+
+.roi-chart canvas {
+    max-height: 300px;
+}
+
+.roi-details h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--primary-green);
+}
+
+.roi-metrics {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.roi-metric {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+}
+
+.roi-metric .metric-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.roi-metric .metric-icon i {
+    font-size: var(--font-size-xl);
+    color: var(--white);
+}
+
+.roi-metric .metric-content h4 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-green);
+}
+
+.roi-metric .metric-content .metric-value {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xs);
+}
+
+.roi-metric .metric-content p {
+    color: var(--gray);
+    font-size: var(--font-size-sm);
+}
+
+/* Back to main */
+.back-to-main {
+    background: var(--light-gray);
+    padding: var(--spacing-3xl) 0;
+}
+
+.back-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.back-content h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary-green);
+}
+
+.back-content p {
+    color: var(--gray);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.back-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .investment-content,
+    .cashflow-content,
+    .tax-content,
+    .roi-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .overview-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .back-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .overview-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .page-hero p {
+        font-size: var(--font-size-base);
+    }
+}

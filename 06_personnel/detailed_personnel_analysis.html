@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление персоналом - Агрокомплекс Старая Русса</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            border-left: 6px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .section h3 {
+            color: #34495e;
+            margin: 25px 0 20px 0;
+            font-size: 1.6em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-size: 0.9em;
+        }
+        
+        td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .positive {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .negative {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .warning {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .insights {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 25px 0;
+        }
+        
+        .insights h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .insights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .insights li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        
+        .insights li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin: 20px 0;
+        }
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            table {
+                font-size: 0.85em;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👥 Управление персоналом</h1>
+            <p>Агрокомплекс в Старой Руссе, 2026-2030 | Оптимизированная структура</p>
+        </div>
+
+        <div class="section">
+            <h2>📊 Структура персонала по этапам</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Постоянный персонал</th>
+                        <th>Самозанятые</th>
+                        <th>Затраты на персонал (млн руб)</th>
+                        <th>% от выручки</th>
+                        <th>Экономия (млн руб)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">2026</td>
+                        <td>5 человек</td>
+                        <td>до 15</td>
+                        <td class="warning">10,43</td>
+                        <td>21,1%</td>
+                        <td class="positive">1,7</td>
+                    </tr>
+                    <tr>
+                        <td>2027</td>
+                        <td>5 человек</td>
+                        <td>до 25</td>
+                        <td class="warning">15,08</td>
+                        <td>26,2%</td>
+                        <td class="positive">3,3</td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td>5 человек</td>
+                        <td>до 30</td>
+                        <td class="warning">18,00</td>
+                        <td>25,1%</td>
+                        <td class="positive">6,7</td>
+                    </tr>
+                    <tr>
+                        <td>2029</td>
+                        <td>5 человек</td>
+                        <td>до 35</td>
+                        <td class="warning">21,16</td>
+                        <td>26,1%</td>
+                        <td class="positive">8,8</td>
+                    </tr>
+                    <tr>
+                        <td>2030</td>
+                        <td>5 человек</td>
+                        <td>до 35</td>
+                        <td class="warning">21,16</td>
+                        <td>23,5%</td>
+                        <td class="positive">8,8</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>👨‍💼 Постоянный персонал (5 человек)</h2>
+            
+            <div class="card">
+                <h3>2026 год - Стартовый этап</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Должность</th>
+                            <th>Количество</th>
+                            <th>Зарплата (руб/месяц)</th>
+                            <th>Годовая (руб)</th>
+                            <th>Обязанности</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Директор/Управляющий</td>
+                            <td>1</td>
+                            <td class="positive">80 000</td>
+                            <td class="positive">960 000</td>
+                            <td>Общее руководство, планирование</td>
+                        </tr>
+                        <tr>
+                            <td>Главный агроном</td>
+                            <td>1</td>
+                            <td class="positive">60 000</td>
+                            <td class="positive">720 000</td>
+                            <td>Технологии выращивания, контроль</td>
+                        </tr>
+                        <tr>
+                            <td>Бухгалтер</td>
+                            <td>1</td>
+                            <td class="positive">45 000</td>
+                            <td class="positive">540 000</td>
+                            <td>Учет, отчетность, налоги</td>
+                        </tr>
+                        <tr>
+                            <td>Механик-водитель</td>
+                            <td>1</td>
+                            <td class="positive">50 000</td>
+                            <td class="positive">600 000</td>
+                            <td>Трактор, техника, ремонт</td>
+                        </tr>
+                        <tr>
+                            <td>Оператор полива</td>
+                            <td>1</td>
+                            <td class="positive">40 000</td>
+                            <td class="positive">480 000</td>
+                            <td>Система орошения, водоснабжение</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>ИТОГО</strong></td>
+                            <td><strong>5</strong></td>
+                            <td><strong>275 000</strong></td>
+                            <td><strong>3 300 000</strong></td>
+                            <td><strong>Ключевые специалисты</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🤝 Самозанятые (по договорам ГПХ)</h2>
+            
+            <div class="card">
+                <h3>2026 год - Сезонные работы</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Период</th>
+                            <th>Количество</th>
+                            <th>Оплата (руб/день)</th>
+                            <th>Дней работы</th>
+                            <th>Общая сумма (руб)</th>
+                            <th>Работы</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Весна (апрель-май)</td>
+                            <td>8</td>
+                            <td class="positive">2 500</td>
+                            <td>60</td>
+                            <td class="positive">1 200 000</td>
+                            <td>Посадка, подготовка</td>
+                        </tr>
+                        <tr>
+                            <td>Лето (июнь-август)</td>
+                            <td>15</td>
+                            <td class="positive">3 000</td>
+                            <td>90</td>
+                            <td class="positive">4 050 000</td>
+                            <td>Сбор клубники, овощей</td>
+                        </tr>
+                        <tr>
+                            <td>Осень (сентябрь-октябрь)</td>
+                            <td>6</td>
+                            <td class="positive">2 500</td>
+                            <td>45</td>
+                            <td class="positive">675 000</td>
+                            <td>Уборка, подготовка</td>
+                        </tr>
+                        <tr>
+                            <td>Круглогодично</td>
+                            <td>2</td>
+                            <td class="positive">2 000</td>
+                            <td>300</td>
+                            <td class="positive">1 200 000</td>
+                            <td>Складские работы, охрана</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td><strong>ИТОГО</strong></td>
+                            <td><strong>до 15</strong></td>
+                            <td><strong>-</strong></td>
+                            <td><strong>-</strong></td>
+                            <td class="positive"><strong>7 125 000</strong></td>
+                            <td><strong>Все сезонные работы</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💰 Анализ эффективности новой структуры</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Постоянный штат (руб)</th>
+                        <th>Новая структура (руб)</th>
+                        <th>Экономия (руб)</th>
+                        <th>Экономия (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">2026</td>
+                        <td class="warning">12 110 000</td>
+                        <td class="warning">10 425 000</td>
+                        <td class="positive">1 685 000</td>
+                        <td class="positive">13,9%</td>
+                    </tr>
+                    <tr>
+                        <td>2027</td>
+                        <td class="warning">18 360 000</td>
+                        <td class="warning">15 075 000</td>
+                        <td class="positive">3 285 000</td>
+                        <td class="positive">17,9%</td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td class="warning">24 667 500</td>
+                        <td class="warning">18 000 000</td>
+                        <td class="positive">6 667 500</td>
+                        <td class="positive">27,0%</td>
+                    </tr>
+                    <tr>
+                        <td>2029</td>
+                        <td class="warning">30 000 000</td>
+                        <td class="warning">21 157 500</td>
+                        <td class="positive">8 842 500</td>
+                        <td class="positive">29,5%</td>
+                    </tr>
+                    <tr>
+                        <td>2030</td>
+                        <td class="warning">30 000 000</td>
+                        <td class="warning">21 157 500</td>
+                        <td class="positive">8 842 500</td>
+                        <td class="positive">29,5%</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>ИТОГО</strong></td>
+                        <td class="warning"><strong>115 137 500</strong></td>
+                        <td class="warning"><strong>85 815 000</strong></td>
+                        <td class="positive"><strong>29 322 500</strong></td>
+                        <td class="positive"><strong>25,5%</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="insights">
+            <h3>✅ Преимущества новой структуры персонала</h3>
+            <ul>
+                <li><strong>Минимальный постоянный штат</strong> - только 5 ключевых сотрудников</li>
+                <li><strong>Самозанятые по договорам ГПХ</strong> - гибкость и экономия</li>
+                <li><strong>Экономия затрат</strong> - 29,3 млн руб за 5 лет</li>
+                <li><strong>Упрощение кадрового учета</strong> - меньше документооборота</li>
+                <li><strong>Система мотивации</strong> - премии за качество и стабильность</li>
+                <li><strong>Создание пула проверенных партнеров</strong> - долгосрочные отношения</li>
+                <li><strong>Снижение налоговой нагрузки</strong> - нет страховых взносов с самозанятых</li>
+                <li><strong>Масштабируемость</strong> - легко увеличить/уменьшить количество самозанятых</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>⚠️ Риски и их минимизация</h2>
+            
+            <div class="card">
+                <h3>Основные риски</h3>
+                <ul>
+                    <li><strong>Нестабильность кадров</strong> - самозанятые могут уйти</li>
+                    <li><strong>Сложность планирования</strong> - зависимость от доступности кадров</li>
+                    <li><strong>Качество работы</strong> - меньше контроля над самозанятыми</li>
+                    <li><strong>Сезонность</strong> - пиковая нагрузка в летний период</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Способы минимизации</h3>
+                <ul>
+                    <li><strong>Создать пул проверенных самозанятых</strong> - постоянные партнеры</li>
+                    <li><strong>Заключить долгосрочные договоры</strong> с ключевыми исполнителями</li>
+                    <li><strong>Внедрить систему мотивации</strong> - премии за качество и стабильность</li>
+                    <li><strong>Создать резерв кадров</strong> - альтернативные исполнители</li>
+                    <li><strong>Обеспечить комфортные условия</strong> - бытовки, питание, транспорт</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Данные актуальны на октябрь 2024 года | Модель: Claude Sonnet 4.5</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сводный бизнес-план агрокомплекса - Старая Русса 2026-2030 (ПОЛНЫЙ)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.3em;
+        }
+        
+        .update-badge {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card h3 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .card .description {
+            color: #7f8c8d;
+            font-size: 1em;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            border-left: 6px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .section h3 {
+            color: #34495e;
+            margin: 25px 0 20px 0;
+            font-size: 1.6em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        th {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-size: 0.9em;
+        }
+        
+        td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e8f4f8;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .positive {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .negative {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .warning {
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .progress-bar {
+            background: #ecf0f1;
+            border-radius: 15px;
+            height: 25px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            border-radius: 15px;
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .insights {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 25px 0;
+        }
+        
+        .insights h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .insights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .insights li {
+            margin: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1em;
+        }
+        
+        .insights li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h4 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .project-card .profit {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .project-card .profit.positive {
+            color: #27ae60;
+        }
+        
+        .project-card .profit.negative {
+            color: #e74c3c;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1em;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            table {
+                font-size: 0.85em;
+            }
+            
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="update-badge">🔄 ПОЛНАЯ ВЕРСИЯ: Персонал + Налоги + Финансирование</div>
+            <h1>🌱 Сводный бизнес-план агрокомплекса</h1>
+            <p>Старая Русса, 2026-2030 | Комплексное сельскохозяйственное производство</p>
+        </div>
+
+        <div class="summary-cards">
+            <div class="card">
+                <h3>💰 Общая прибыль за 5 лет</h3>
+                <div class="value">130,023 млн руб</div>
+                <div class="description">Накопленная прибыль по всем направлениям</div>
+            </div>
+            
+            <div class="card">
+                <h3>💎 Имеющиеся активы</h3>
+                <div class="value">12,5 млн руб</div>
+                <div class="description">Земля 150 га + трактор (до 2026 года)</div>
+            </div>
+            
+            <div class="card">
+                <h3>🏗️ Новые инвестиции</h3>
+                <div class="value">28,458 млн руб</div>
+                <div class="description">С учетом субсидий 22,7 млн руб</div>
+            </div>
+            
+            <div class="card">
+                <h3>🎯 Рентабельность инвестиций</h3>
+                <div class="value">457%</div>
+                <div class="description">Очень высокая эффективность</div>
+            </div>
+            
+            <div class="card">
+                <h3>⏱️ Срок окупаемости</h3>
+                <div class="value">2-3 года</div>
+                <div class="description">Быстрая окупаемость проекта</div>
+            </div>
+            
+            <div class="card">
+                <h3>📈 Среднегодовая прибыль</h3>
+                <div class="value">26,005 млн руб</div>
+                <div class="description">Стабильный доход с 2027 года</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Экономические показатели по годам</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Клубника (млн руб)</th>
+                        <th>Овощи (млн руб)</th>
+                        <th>Кустарники (млн руб)</th>
+                        <th>Сады (млн руб)</th>
+                        <th>Субсидии (млн руб)</th>
+                        <th>Осн. средства (млн руб)</th>
+                        <th>ИТОГО (млн руб)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">2026</td>
+                        <td class="negative">-2,344</td>
+                        <td class="positive">10,645</td>
+                        <td class="negative">-8,694</td>
+                        <td class="negative">-1,6</td>
+                        <td class="positive">15,812</td>
+                        <td class="negative">-18,294</td>
+                        <td class="negative">-4,475</td>
+                    </tr>
+                    <tr>
+                        <td>2027</td>
+                        <td class="positive">11,27</td>
+                        <td class="positive">10,645</td>
+                        <td class="negative">-0,923</td>
+                        <td class="positive">1,8</td>
+                        <td class="positive">6,897</td>
+                        <td class="negative">-4,594</td>
+                        <td class="positive">25,295</td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td class="positive">19,21</td>
+                        <td class="positive">10,645</td>
+                        <td class="positive">2,955</td>
+                        <td class="positive">0,25</td>
+                        <td>0</td>
+                        <td class="negative">-4,594</td>
+                        <td class="positive">28,461</td>
+                    </tr>
+                    <tr>
+                        <td>2029</td>
+                        <td class="positive">19,21</td>
+                        <td class="positive">10,645</td>
+                        <td class="positive">6,105</td>
+                        <td class="positive">6,25</td>
+                        <td>0</td>
+                        <td class="negative">-5,294</td>
+                        <td class="positive">37,911</td>
+                    </tr>
+                    <tr>
+                        <td>2030</td>
+                        <td class="positive">19,21</td>
+                        <td class="positive">10,645</td>
+                        <td class="positive">10,83</td>
+                        <td class="positive">10,75</td>
+                        <td>0</td>
+                        <td class="negative">-8,594</td>
+                        <td class="positive">42,831</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🌱 Анализ по подпроектам</h2>
+            
+            <div class="project-grid">
+                <div class="project-card">
+                    <h4>🍓 Клубника (6 га)</h4>
+                    <div class="profit positive">66,556 млн руб</div>
+                    <p><strong>Инвестиции:</strong> 4,0 млн руб</p>
+                    <p><strong>Максимальная рентабельность:</strong> 145%</p>
+                    <p><strong>Период окупаемости:</strong> 2 года</p>
+                    <p><strong>Особенности:</strong> Быстрая окупаемость, стабильная прибыль</p>
+                </div>
+                
+                <div class="project-card">
+                    <h4>🥬 Овощи (35,5 га)</h4>
+                    <div class="profit positive">53,225 млн руб</div>
+                    <p><strong>Инвестиции:</strong> 12,77 млн руб</p>
+                    <p><strong>Средняя рентабельность:</strong> 172%</p>
+                    <p><strong>Стабильность:</strong> Высокая</p>
+                    <p><strong>Особенности:</strong> Стабильная прибыль с первого года</p>
+                </div>
+                
+                <div class="project-card">
+                    <h4>🫐 Кустарники (7 га)</h4>
+                    <div class="profit positive">10,273 млн руб</div>
+                    <p><strong>Инвестиции:</strong> 3,05 млн руб</p>
+                    <p><strong>Максимальная рентабельность:</strong> 2612%</p>
+                    <p><strong>Период окупаемости:</strong> 4 года</p>
+                    <p><strong>Особенности:</strong> Долгосрочные инвестиции, очень высокая прибыль</p>
+                </div>
+                
+                <div class="project-card">
+                    <h4>🍎 Сады (50 га)</h4>
+                    <div class="profit positive">17,45 млн руб</div>
+                    <p><strong>Инвестиции:</strong> 7,5 млн руб</p>
+                    <p><strong>Максимальная рентабельность:</strong> 1676%</p>
+                    <p><strong>Период окупаемости:</strong> 4 года</p>
+                    <p><strong>Особенности:</strong> Крупномасштабные инвестиции, максимальная прибыль</p>
+                </div>
+                
+                <div class="project-card">
+                    <h4>🏗️ Основные средства</h4>
+                    <div class="profit negative">-41,370 млн руб</div>
+                    <p><strong>Инвестиции:</strong> 14,7 млн руб</p>
+                    <p><strong>Годовая амортизация:</strong> 2,494 млн руб</p>
+                    <p><strong>Годовое обслуживание:</strong> 1,015 млн руб</p>
+                    <p><strong>Особенности:</strong> Надежная инфраструктура, водоснабжение, помещения, транспорт</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💎 Имеющиеся активы (до 2026 года)</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Актив</th>
+                        <th>Стоимость (млн руб)</th>
+                        <th>Амортизация (тыс руб/год)</th>
+                        <th>Обслуживание (тыс руб/год)</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Земля 150 га</td>
+                        <td class="positive">7,5</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td class="positive">Собственность, не амортизируется</td>
+                    </tr>
+                    <tr>
+                        <td>Трактор с оборудованием</td>
+                        <td class="positive">5,0</td>
+                        <td>625</td>
+                        <td>400</td>
+                        <td class="positive">Срок службы 8 лет</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>ИТОГО</strong></td>
+                        <td class="positive"><strong>12,5</strong></td>
+                        <td><strong>625</strong></td>
+                        <td><strong>400</strong></td>
+                        <td class="positive"><strong>Снижает потребность в инвестициях</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>👥 Управление персоналом (ОПТИМИЗИРОВАННОЕ)</h2>
+            
+            <h3>Структура персонала по этапам</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Постоянный</th>
+                        <th>Самозанятые</th>
+                        <th>Затраты на персонал (млн руб)</th>
+                        <th>% от выручки</th>
+                        <th>Экономия (млн руб)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">2026</td>
+                        <td>5 человек</td>
+                        <td>до 15</td>
+                        <td class="warning">10,43</td>
+                        <td>21,1%</td>
+                        <td class="positive">1,7</td>
+                    </tr>
+                    <tr>
+                        <td>2027</td>
+                        <td>5 человек</td>
+                        <td>до 25</td>
+                        <td class="warning">15,08</td>
+                        <td>26,2%</td>
+                        <td class="positive">3,3</td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td>5 человек</td>
+                        <td>до 30</td>
+                        <td class="warning">18,00</td>
+                        <td>25,1%</td>
+                        <td class="positive">6,7</td>
+                    </tr>
+                    <tr>
+                        <td>2029</td>
+                        <td>5 человек</td>
+                        <td>до 35</td>
+                        <td class="warning">21,16</td>
+                        <td>26,1%</td>
+                        <td class="positive">8,8</td>
+                    </tr>
+                    <tr>
+                        <td>2030</td>
+                        <td>5 человек</td>
+                        <td>до 35</td>
+                        <td class="warning">21,16</td>
+                        <td>23,5%</td>
+                        <td class="positive">8,8</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insights">
+                <h3>✅ Преимущества оптимизированной структуры персонала</h3>
+                <ul>
+                    <li><strong>Минимальный постоянный штат</strong> - только 5 ключевых сотрудников</li>
+                    <li><strong>Самозанятые по договорам ГПХ</strong> - гибкость и экономия</li>
+                    <li><strong>Экономия затрат</strong> - 29,3 млн руб за 5 лет</li>
+                    <li><strong>Упрощение кадрового учета</strong> - меньше документооборота</li>
+                    <li><strong>Система мотивации</strong> - премии за качество и стабильность</li>
+                    <li><strong>Создание пула проверенных партнеров</strong> - долгосрочные отношения</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💰 Налогообложение (ЕСХН 6%) (ОПТИМИЗИРОВАННОЕ)</h2>
+            
+            <h3>Налоговые платежи по годам (ОПТИМИЗИРОВАННЫЕ)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>ЕСХН 6% (руб)</th>
+                        <th>Страховые взносы (руб)</th>
+                        <th>Итого налогов (руб)</th>
+                        <th>Эффективная ставка (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">2026</td>
+                        <td class="positive">479 440</td>
+                        <td class="warning">990 000</td>
+                        <td class="warning">1 469 440</td>
+                        <td class="positive">3,0%</td>
+                    </tr>
+                    <tr>
+                        <td>2027</td>
+                        <td class="positive">990 040</td>
+                        <td class="warning">1 080 000</td>
+                        <td class="warning">2 070 040</td>
+                        <td class="positive">3,6%</td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td class="positive">1 884 640</td>
+                        <td class="warning">1 170 000</td>
+                        <td class="warning">3 054 640</td>
+                        <td class="positive">4,3%</td>
+                    </tr>
+                    <tr>
+                        <td>2029</td>
+                        <td class="positive">2 038 630</td>
+                        <td class="warning">1 296 000</td>
+                        <td class="warning">3 334 630</td>
+                        <td class="positive">4,1%</td>
+                    </tr>
+                    <tr>
+                        <td>2030</td>
+                        <td class="positive">2 370 130</td>
+                        <td class="warning">1 296 000</td>
+                        <td class="warning">3 666 130</td>
+                        <td class="positive">4,1%</td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>ИТОГО</strong></td>
+                        <td class="positive"><strong>7 762 880</strong></td>
+                        <td class="warning"><strong>5 832 000</strong></td>
+                        <td class="warning"><strong>13 594 880</strong></td>
+                        <td class="positive"><strong>3,8%</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insights" style="background: linear-gradient(135deg, #00b894, #00a085);">
+                <h3>💡 Преимущества ЕСХН с самозанятыми</h3>
+                <ul>
+                    <li><strong>Минимальная налоговая нагрузка</strong> - 3,8% вместо 10,8%</li>
+                    <li><strong>Огромная экономия на налогах</strong> - 25,2 млн руб за 5 лет</li>
+                    <li><strong>Снижение затрат на персонал</strong> - 29,3 млн руб за 5 лет</li>
+                    <li><strong>Общая экономия</strong> - 54,5 млн руб за 5 лет</li>
+                    <li><strong>Упрощенная отчетность</strong> - одна декларация в год</li>
+                    <li><strong>Нет страховых взносов</strong> с самозанятых (30% экономии)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💰 Потребности в финансировании (НОВОЕ)</h2>
+            
+            <h3>Структура финансирования по годам</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Год</th>
+                        <th>Инвестиции (млн руб)</th>
+                        <th>Оборотный капитал (млн руб)</th>
+                        <th>Страховой фонд (млн руб)</th>
+                        <th><strong>ИТОГО (млн руб)</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="highlight">2026</td>
+                        <td class="warning">44,27</td>
+                        <td class="warning">16,93</td>
+                        <td class="warning">8,98</td>
+                        <td class="negative"><strong>70,17</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2027</td>
+                        <td class="warning">3,0</td>
+                        <td class="warning">23,88</td>
+                        <td class="warning">3,5</td>
+                        <td class="warning"><strong>30,38</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2028</td>
+                        <td class="warning">1,0</td>
+                        <td class="warning">28,6</td>
+                        <td class="warning">3,7</td>
+                        <td class="warning"><strong>33,3</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2029</td>
+                        <td class="warning">1,7</td>
+                        <td class="warning">33,56</td>
+                        <td class="warning">4,5</td>
+                        <td class="warning"><strong>39,76</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2030</td>
+                        <td class="warning">5,0</td>
+                        <td class="warning">35,76</td>
+                        <td class="warning">5,0</td>
+                        <td class="warning"><strong>45,76</strong></td>
+                    </tr>
+                    <tr class="highlight">
+                        <td><strong>ИТОГО</strong></td>
+                        <td class="warning"><strong>54,97</strong></td>
+                        <td class="warning"><strong>138,72</strong></td>
+                        <td class="warning"><strong>25,68</strong></td>
+                        <td class="warning"><strong>219,37</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Источники финансирования</h3>
+            <div class="chart-container">
+                <p><strong>Имеющиеся активы:</strong> 12,5 млн руб (земля + трактор)</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 5.7%;">5,7%</div>
+                </div>
+                
+                <p><strong>Субсидии:</strong> 22,71 млн руб (государственная поддержка)</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 10.4%;">10,4%</div>
+                </div>
+                
+                <p><strong>Требуется привлечь:</strong> 184,15 млн руб (кредиты/инвестиции)</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 83.9%;">83,9%</div>
+                </div>
+            </div>
+
+            <h3>Критические периоды</h3>
+            <div class="insights" style="background: linear-gradient(135deg, #fd79a8, #e84393);">
+                <h3>⚠️ Критические периоды финансирования</h3>
+                <ul>
+                    <li><strong>2026 год</strong> - дефицит 20,9 млн руб (требуется кредит 15 млн руб)</li>
+                    <li><strong>2027-2030 годы</strong> - профицит от 27,1 до 44,4 млн руб/год</li>
+                    <li><strong>Максимальная потребность</strong> - 70,17 млн руб в первый год</li>
+                    <li><strong>Общая потребность</strong> - 219,37 млн руб за 5 лет</li>
+                    <li><strong>Покрыто активами и субсидиями</strong> - 35,21 млн руб</li>
+                    <li><strong>Требуется привлечь</strong> - 184,15 млн руб</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📋 Заключение и рекомендации</h2>
+            
+            <div class="insights">
+                <h3>✅ Ключевые преимущества проекта (ПОЛНЫЕ)</h3>
+                <ul>
+                    <li><strong>Имеющиеся активы</strong> - земля 150 га и трактор на 12,5 млн руб снижают потребность в инвестициях</li>
+                    <li><strong>Высокая рентабельность</strong> - ROI 457% за 5 лет</li>
+                    <li><strong>Быстрая окупаемость</strong> - 2-3 года до выхода в плюс</li>
+                    <li><strong>Значительная государственная поддержка</strong> - субсидии 22,7 млн руб покрывают 80% чистых инвестиций</li>
+                    <li><strong>Диверсифицированное производство</strong> - 4 направления деятельности снижают риски</li>
+                    <li><strong>Стабильный рост прибыли</strong> - от -4,5 до +42,8 млн руб</li>
+                    <li><strong>Низкий риск</strong> - чистые инвестиции покрываются субсидиями</li>
+                    <li><strong>ОПТИМИЗИРОВАННАЯ СТРУКТУРА ПЕРСОНАЛА</strong> - экономия 54,5 млн руб за 5 лет</li>
+                    <li><strong>ДЕТАЛЬНОЕ ПЛАНИРОВАНИЕ ФИНАНСИРОВАНИЯ</strong> - четкие потребности по годам</li>
+                </ul>
+            </div>
+
+            <div class="insights" style="background: linear-gradient(135deg, #fd79a8, #e84393);">
+                <h3>⚠️ Рекомендации по реализации (ПОЛНЫЕ)</h3>
+                <ul>
+                    <li><strong>Привлечение кредита</strong> - 15 млн руб на первый год для покрытия дефицита</li>
+                    <li><strong>Использование всех субсидий</strong> - 22,7 млн руб государственной поддержки</li>
+                    <li><strong>Создание страхового фонда</strong> - 25,7 млн руб за 5 лет на покрытие рисков</li>
+                    <li><strong>Приоритет на овощи и клубнику</strong> для быстрой окупаемости</li>
+                    <li><strong>Создание пула проверенных самозанятых</strong> - долгосрочные партнеры</li>
+                    <li><strong>Внедрение системы мотивации</strong> - премии за качество и стабильность</li>
+                    <li><strong>Страхование урожая</strong> от погодных рисков</li>
+                    <li><strong>Долгосрочные контракты</strong> с покупателями для стабильности</li>
+                    <li><strong>Планирование замены оборудования</strong> заранее</li>
+                    <li><strong>Контроль денежных потоков</strong> - строгое соблюдение бюджета</li>
+                </ul>
+            </div>
+
+            <div class="insights" style="background: linear-gradient(135deg, #a29bfe, #6c5ce7);">
+                <h3>🚀 Перспективы развития</h3>
+                <ul>
+                    <li><strong>Расширение площадей</strong> - использование резерва 57,5 га</li>
+                    <li><strong>Переработка продукции</strong> - добавленная стоимость</li>
+                    <li><strong>Экспорт продукции</strong> - выход на международные рынки</li>
+                    <li><strong>Органическое производство</strong> - премиальные цены</li>
+                    <li><strong>Агротуризм</strong> - дополнительный доход</li>
+                    <li><strong>Кооперация с другими хозяйствами</strong> - синергия</li>
+                    <li><strong>Масштабирование модели</strong> - тиражирование успешного опыта</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Данные актуальны на октябрь 2024 года | Модель: Claude Sonnet 4.5 | ПОЛНАЯ ВЕРСИЯ: Персонал + Налоги + Финансирование</p>
+        </div>
+    </div>
+</body>
+</html>

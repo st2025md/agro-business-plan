@@ -1,0 +1,499 @@
+/* Print styles for PDF generation */
+@media print {
+    /* Reset margins and set page size */
+    @page {
+        size: A4;
+        margin: 1in;
+    }
+    
+    /* Hide navigation and interactive elements */
+    .navbar,
+    .nav-actions,
+    .hero-actions,
+    .contact-actions,
+    .btn,
+    .hamburger,
+    .nav-menu {
+        display: none !important;
+    }
+    
+    /* Page breaks */
+    .slide {
+        page-break-after: always;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slide:last-child {
+        page-break-after: avoid;
+    }
+    
+    /* Typography for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        color: #000;
+        background: #fff;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #2d5a27;
+        page-break-after: avoid;
+    }
+    
+    .slide-title {
+        font-size: 24pt;
+        font-weight: 700;
+        margin-bottom: 20pt;
+        text-align: center;
+        color: #2d5a27;
+    }
+    
+    /* Title slide specific */
+    .title-slide {
+        text-align: center;
+        background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
+        color: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .title-slide h1 {
+        font-size: 36pt;
+        font-weight: 700;
+        margin-bottom: 10pt;
+        color: #fff;
+    }
+    
+    .title-slide h2 {
+        font-size: 24pt;
+        font-weight: 500;
+        margin-bottom: 30pt;
+        color: #fbbf24;
+    }
+    
+    .title-stats {
+        display: flex;
+        justify-content: center;
+        gap: 40pt;
+        margin: 40pt 0;
+    }
+    
+    .stat-highlight {
+        text-align: center;
+    }
+    
+    .stat-highlight .stat-number {
+        font-size: 32pt;
+        font-weight: 700;
+        color: #fbbf24;
+        display: block;
+    }
+    
+    .stat-highlight .stat-label {
+        font-size: 12pt;
+        color: #fff;
+        opacity: 0.9;
+    }
+    
+    .title-footer {
+        margin-top: 40pt;
+    }
+    
+    .title-footer p {
+        font-size: 14pt;
+        margin-bottom: 5pt;
+    }
+    
+    .date {
+        font-size: 12pt;
+        opacity: 0.8;
+    }
+    
+    /* Grid layouts for print */
+    .summary-grid,
+    .directions-grid,
+    .social-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20pt;
+    }
+    
+    .summary-card,
+    .direction-card,
+    .social-card {
+        background: #fff;
+        border: 1pt solid #e5e7eb;
+        border-radius: 8pt;
+        padding: 15pt;
+        page-break-inside: avoid;
+    }
+    
+    .summary-card h3,
+    .direction-card h3,
+    .social-card h3 {
+        font-size: 14pt;
+        font-weight: 600;
+        margin-bottom: 10pt;
+        color: #2d5a27;
+    }
+    
+    .summary-card ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .summary-card li {
+        margin-bottom: 5pt;
+        font-size: 11pt;
+    }
+    
+    /* Financial charts */
+    .financial-overview,
+    .investment-overview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20pt;
+        align-items: start;
+    }
+    
+    .financial-chart,
+    .investment-chart {
+        background: #fff;
+        border: 1pt solid #e5e7eb;
+        border-radius: 8pt;
+        padding: 15pt;
+    }
+    
+    .financial-chart h3,
+    .investment-chart h3 {
+        font-size: 14pt;
+        font-weight: 600;
+        margin-bottom: 10pt;
+        text-align: center;
+        color: #2d5a27;
+    }
+    
+    .financial-chart canvas,
+    .investment-chart canvas {
+        max-height: 200pt;
+    }
+    
+    /* Tables */
+    .investment-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 11pt;
+    }
+    
+    .investment-table th,
+    .investment-table td {
+        border: 1pt solid #e5e7eb;
+        padding: 8pt;
+        text-align: left;
+    }
+    
+    .investment-table th {
+        background: #f8fafc;
+        font-weight: 600;
+        color: #2d5a27;
+    }
+    
+    .investment-table .total {
+        background: #f8fafc;
+        font-weight: 600;
+    }
+    
+    /* Metrics */
+    .metric-grid,
+    .financial-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15pt;
+    }
+    
+    .metric,
+    .financial-metric {
+        text-align: center;
+        background: #f8fafc;
+        border-radius: 8pt;
+        padding: 15pt;
+    }
+    
+    .metric-value,
+    .financial-metric .metric-value {
+        font-size: 20pt;
+        font-weight: 700;
+        color: #2d5a27;
+        display: block;
+    }
+    
+    .metric-unit,
+    .financial-metric .metric-unit {
+        font-size: 12pt;
+        font-weight: 600;
+        color: #64748b;
+    }
+    
+    .metric-label,
+    .financial-metric .metric-label {
+        font-size: 10pt;
+        color: #64748b;
+        margin-top: 5pt;
+    }
+    
+    /* Direction cards */
+    .direction-header {
+        display: flex;
+        align-items: center;
+        gap: 10pt;
+        margin-bottom: 10pt;
+        padding-bottom: 10pt;
+        border-bottom: 1pt solid #e5e7eb;
+    }
+    
+    .direction-icon {
+        width: 30pt;
+        height: 30pt;
+        background: #2d5a27;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 12pt;
+    }
+    
+    .direction-header h3 {
+        font-size: 14pt;
+        font-weight: 600;
+        color: #2d5a27;
+        margin: 0;
+        flex: 1;
+    }
+    
+    .area {
+        background: #e5e7eb;
+        padding: 2pt 8pt;
+        border-radius: 4pt;
+        font-size: 10pt;
+        font-weight: 600;
+        color: #64748b;
+    }
+    
+    .direction-metrics {
+        display: flex;
+        gap: 15pt;
+        margin-bottom: 10pt;
+    }
+    
+    .direction-metrics .metric {
+        flex: 1;
+        text-align: center;
+        background: #f8fafc;
+        border-radius: 6pt;
+        padding: 10pt;
+    }
+    
+    .direction-metrics .metric-value {
+        font-size: 16pt;
+        font-weight: 700;
+        color: #2d5a27;
+    }
+    
+    .direction-metrics .metric-unit {
+        font-size: 10pt;
+        font-weight: 600;
+        color: #64748b;
+    }
+    
+    .direction-metrics .metric-label {
+        font-size: 9pt;
+        color: #64748b;
+    }
+    
+    /* Social impact */
+    .social-icon {
+        width: 40pt;
+        height: 40pt;
+        background: #2563eb;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 10pt;
+        color: #fff;
+        font-size: 16pt;
+    }
+    
+    .social-card h3 {
+        text-align: center;
+        font-size: 14pt;
+        font-weight: 600;
+        margin-bottom: 10pt;
+        color: #2d5a27;
+    }
+    
+    .social-number {
+        font-size: 24pt;
+        font-weight: 700;
+        color: #2563eb;
+        text-align: center;
+        margin-bottom: 5pt;
+    }
+    
+    .social-card p {
+        text-align: center;
+        font-size: 11pt;
+        color: #64748b;
+        line-height: 1.4;
+    }
+    
+    /* Proposal content */
+    .proposal-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20pt;
+    }
+    
+    .proposal-highlights ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .proposal-highlights li {
+        margin-bottom: 8pt;
+        font-size: 11pt;
+        display: flex;
+        align-items: flex-start;
+        gap: 8pt;
+    }
+    
+    .proposal-highlights i {
+        color: #10b981;
+        font-size: 12pt;
+        margin-top: 2pt;
+    }
+    
+    /* Contact section */
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20pt;
+        align-items: center;
+    }
+    
+    .contact-info h3 {
+        font-size: 16pt;
+        font-weight: 600;
+        margin-bottom: 10pt;
+        color: #2d5a27;
+    }
+    
+    .contact-info p {
+        font-size: 12pt;
+        margin-bottom: 15pt;
+        color: #64748b;
+    }
+    
+    .contact-features {
+        display: grid;
+        gap: 8pt;
+    }
+    
+    .feature {
+        display: flex;
+        align-items: center;
+        gap: 8pt;
+        font-size: 11pt;
+    }
+    
+    .feature i {
+        color: #10b981;
+        font-size: 12pt;
+    }
+    
+    /* Hide interactive elements */
+    .hero-background,
+    .hero-shapes,
+    .shape {
+        display: none;
+    }
+    
+    /* Ensure proper spacing */
+    .slide-content {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Force page breaks where needed */
+    .slide-title {
+        page-break-after: avoid;
+    }
+    
+    /* Ensure charts are visible */
+    canvas {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Footer */
+    .footer {
+        display: none;
+    }
+    
+    /* Remove shadows and effects */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Ensure colors print */
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* Additional print optimizations */
+@media print and (color) {
+    .title-slide {
+        background: #2d5a27 !important;
+        color: #fff !important;
+    }
+    
+    .stat-highlight .stat-number {
+        color: #fbbf24 !important;
+    }
+    
+    .direction-icon,
+    .social-icon {
+        background: #2d5a27 !important;
+        color: #fff !important;
+    }
+    
+    .metric-value,
+    .financial-metric .metric-value,
+    .social-number {
+        color: #2d5a27 !important;
+    }
+}
+
+/* Landscape orientation for specific slides */
+@media print and (orientation: landscape) {
+    .financial-overview,
+    .investment-overview,
+    .proposal-content,
+    .contact-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .summary-grid,
+    .directions-grid,
+    .social-impact-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

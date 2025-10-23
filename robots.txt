@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ваш-username.github.io/agro-business-plan/sitemap.xml
+
+# Disallow private directories
+Disallow: /css/
+Disallow: /js/
+Disallow: /docs/
+
+# Allow main pages
+Allow: /index.html
+Allow: /presentation.html
+Allow: /financial-details.html
+Allow: /social-impact.html
+Allow: /risk-analysis.html
+Allow: /implementation-plan.html
+Allow: /government.html
+Allow: /investors.html

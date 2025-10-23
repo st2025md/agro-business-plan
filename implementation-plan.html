@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>План реализации | Агрокомплекс в Старой Руссе</title>
+    <meta name="description" content="Детальный план реализации проекта агрокомплекса с поэтапным внедрением">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>Агрокомплекс</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="financial-details.html">Финансы</a></li>
+                <li><a href="social-impact.html">Социальный эффект</a></li>
+                <li><a href="risk-analysis.html">Анализ рисков</a></li>
+                <li><a href="index.html#directions">План реализации</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span>План реализации</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>План реализации проекта</h1>
+            <p>Поэтапное внедрение агрокомплекса с детальным календарным планом и ключевыми этапами</p>
+        </div>
+    </section>
+
+    <!-- Timeline Overview -->
+    <section class="timeline-overview">
+        <div class="container">
+            <h2 class="section-title">Временная шкала проекта</h2>
+            <div class="timeline-chart">
+                <canvas id="timelineChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 1: Preparation -->
+    <section class="phase phase-1">
+        <div class="container">
+            <div class="phase-header">
+                <div class="phase-number">1</div>
+                <div class="phase-info">
+                    <h2>Этап 1: Подготовка (2025 год)</h2>
+                    <p>Подготовительные работы и получение необходимых разрешений</p>
+                </div>
+            </div>
+            <div class="phase-content">
+                <div class="phase-tasks">
+                    <h3>Ключевые задачи</h3>
+                    <div class="tasks-grid">
+                        <div class="task-card">
+                            <div class="task-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Подготовка почвы</h4>
+                            <ul>
+                                <li>Анализ почвы и планирование участков</li>
+                                <li>Внесение удобрений и подготовка грядок</li>
+                                <li>Планирование системы полива</li>
+                                <li>Подготовка дренажной системы</li>
+                            </ul>
+                        </div>
+                        <div class="task-card">
+                            <div class="task-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h4>Заказ посадочного материала</h4>
+                            <ul>
+                                <li>Выбор поставщиков рассады и саженцев</li>
+                                <li>Заключение договоров на поставку</li>
+                                <li>Планирование сроков поставки</li>
+                                <li>Создание резервного фонда</li>
+                            </ul>
+                        </div>
+                        <div class="task-card">
+                            <div class="task-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Найм персонала</h4>
+                            <ul>
+                                <li>Поиск и отбор кандидатов</li>
+                                <li>Обучение персонала</li>
+                                <li>Создание системы мотивации</li>
+                                <li>Подготовка рабочих мест</li>
+                            </ul>
+                        </div>
+                        <div class="task-card">
+                            <div class="task-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4>Получение разрешений</h4>
+                            <ul>
+                                <li>Регистрация юридического лица</li>
+                                <li>Получение лицензий и разрешений</li>
+                                <li>Согласование с местными властями</li>
+                                <li>Подготовка документов для субсидий</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-timeline">
+                    <h3>Календарный план</h3>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Январь-Март</div>
+                            <div class="timeline-content">
+                                <h4>Планирование и подготовка</h4>
+                                <p>Анализ почвы, планирование участков, получение разрешений</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Апрель-Июнь</div>
+                            <div class="timeline-content">
+                                <h4>Инфраструктура</h4>
+                                <p>Строительство системы полива, подготовка почвы, заказ материалов</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Июль-Сентябрь</div>
+                            <div class="timeline-content">
+                                <h4>Персонал и обучение</h4>
+                                <p>Найм персонала, обучение, подготовка к следующему сезону</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">Октябрь-Декабрь</div>
+                            <div class="timeline-content">
+                                <h4>Финализация</h4>
+                                <p>Получение субсидий, финальная подготовка, планирование посадок</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 2: First Year -->
+    <section class="phase phase-2">
+        <div class="container">
+            <div class="phase-header">
+                <div class="phase-number">2</div>
+                <div class="phase-info">
+                    <h2>Этап 2: Первый год (2026 год)</h2>
+                    <p>Стартовые инвестиции и первые посадки</p>
+                </div>
+            </div>
+            <div class="phase-content">
+                <div class="phase-investments">
+                    <h3>Инвестиции первого года</h3>
+                    <div class="investment-breakdown">
+                        <div class="investment-item">
+                            <div class="investment-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div class="investment-details">
+                                <h4>Основные средства</h4>
+                                <div class="investment-amount">14,7 млн руб</div>
+                                <ul>
+                                    <li>Водоснабжение и водоотведение: 6,0 млн</li>
+                                    <li>Транспорт и мониторинг: 5,0 млн</li>
+                                    <li>Вспомогательные помещения: 1,5 млн</li>
+                                    <li>Инвентарь и оборудование: 1,5 млн</li>
+                                    <li>Парники для рассады: 0,7 млн</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="investment-item">
+                            <div class="investment-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="investment-details">
+                                <h4>Посадочный материал</h4>
+                                <div class="investment-amount">29,57 млн руб</div>
+                                <ul>
+                                    <li>Сады (саженцы): 15,0 млн</li>
+                                    <li>Кустарники (саженцы): 10,57 млн</li>
+                                    <li>Клубника (рассада): 4,0 млн</li>
+                                    <li>Овощи (семена): 0 млн</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-planting">
+                    <h3>План посадок</h3>
+                    <div class="planting-schedule">
+                        <div class="planting-item">
+                            <div class="planting-season">Весна (Апрель-Май)</div>
+                            <div class="planting-content">
+                                <h4>Овощи и клубника</h4>
+                                <ul>
+                                    <li>Посадка рассады клубники (2 га)</li>
+                                    <li>Посев семян овощей (35,5 га)</li>
+                                    <li>Высадка рассады в парники</li>
+                                    <li>Установка системы полива</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="planting-item">
+                            <div class="planting-season">Осень (Сентябрь-Октябрь)</div>
+                            <div class="planting-content">
+                                <h4>Сады и кустарники</h4>
+                                <ul>
+                                    <li>Посадка саженцев садов (50 га)</li>
+                                    <li>Посадка саженцев кустарников (7 га)</li>
+                                    <li>Подготовка к зимовке</li>
+                                    <li>Установка защитных конструкций</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 3: Development -->
+    <section class="phase phase-3">
+        <div class="container">
+            <div class="phase-header">
+                <div class="phase-number">3</div>
+                <div class="phase-info">
+                    <h2>Этап 3: Развитие (2027-2028 годы)</h2>
+                    <p>Расширение производства и оптимизация процессов</p>
+                </div>
+            </div>
+            <div class="phase-content">
+                <div class="phase-expansion">
+                    <h3>Расширение площадей</h3>
+                    <div class="expansion-plan">
+                        <div class="expansion-year">
+                            <h4>2027 год</h4>
+                            <div class="expansion-details">
+                                <div class="expansion-item">
+                                    <span class="crop">Клубника</span>
+                                    <span class="area">+2 га (всего 4 га)</span>
+                                </div>
+                                <div class="expansion-item">
+                                    <span class="crop">Кустарники</span>
+                                    <span class="area">Начало плодоношения</span>
+                                </div>
+                                <div class="expansion-item">
+                                    <span class="crop">Сады</span>
+                                    <span class="area">Уход и формирование</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expansion-year">
+                            <h4>2028 год</h4>
+                            <div class="expansion-details">
+                                <div class="expansion-item">
+                                    <span class="crop">Клубника</span>
+                                    <span class="area">+2 га (всего 6 га)</span>
+                                </div>
+                                <div class="expansion-item">
+                                    <span class="crop">Кустарники</span>
+                                    <span class="area">Полное плодоношение</span>
+                                </div>
+                                <div class="expansion-item">
+                                    <span class="crop">Сады</span>
+                                    <span class="area">Начало плодоношения</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-optimization">
+                    <h3>Оптимизация процессов</h3>
+                    <div class="optimization-areas">
+                        <div class="optimization-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Повышение урожайности</h4>
+                            <ul>
+                                <li>Внедрение новых технологий</li>
+                                <li>Оптимизация системы полива</li>
+                                <li>Улучшение качества почвы</li>
+                                <li>Селекция лучших сортов</li>
+                            </ul>
+                        </div>
+                        <div class="optimization-card">
+                            <div class="card-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h4>Развитие сбыта</h4>
+                            <ul>
+                                <li>Поиск новых покупателей</li>
+                                <li>Развитие прямых продаж</li>
+                                <li>Создание бренда</li>
+                                <li>Экспортные поставки</li>
+                            </ul>
+                        </div>
+                        <div class="optimization-card">
+                            <div class="card-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4>Внедрение технологий</h4>
+                            <ul>
+                                <li>Система мониторинга полей</li>
+                                <li>Автоматизация полива</li>
+                                <li>Использование дронов</li>
+                                <li>Цифровизация процессов</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 4: Stabilization -->
+    <section class="phase phase-4">
+        <div class="container">
+            <div class="phase-header">
+                <div class="phase-number">4</div>
+                <div class="phase-info">
+                    <h2>Этап 4: Стабилизация (2029-2030 годы)</h2>
+                    <p>Выход на полную мощность и максимизация прибыли</p>
+                </div>
+            </div>
+            <div class="phase-content">
+                <div class="phase-production">
+                    <h3>Полная производственная мощность</h3>
+                    <div class="production-capacity">
+                        <div class="capacity-item">
+                            <div class="capacity-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <div class="capacity-details">
+                                <h4>Клубника</h4>
+                                <div class="capacity-metrics">
+                                    <div class="metric">
+                                        <span class="metric-label">Площадь:</span>
+                                        <span class="metric-value">6 га</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Урожай:</span>
+                                        <span class="metric-value">128 т/год</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Прибыль:</span>
+                                        <span class="metric-value">19,2 млн руб/год</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="capacity-item">
+                            <div class="capacity-icon">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <div class="capacity-details">
+                                <h4>Овощи</h4>
+                                <div class="capacity-metrics">
+                                    <div class="metric">
+                                        <span class="metric-label">Площадь:</span>
+                                        <span class="metric-value">35,5 га</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Урожай:</span>
+                                        <span class="metric-value">955 т/год</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Прибыль:</span>
+                                        <span class="metric-value">10,6 млн руб/год</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="capacity-item">
+                            <div class="capacity-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <div class="capacity-details">
+                                <h4>Кустарники</h4>
+                                <div class="capacity-metrics">
+                                    <div class="metric">
+                                        <span class="metric-label">Площадь:</span>
+                                        <span class="metric-value">7 га</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Урожай:</span>
+                                        <span class="metric-value">126 т/год</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Прибыль:</span>
+                                        <span class="metric-value">10,8 млн руб/год</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="capacity-item">
+                            <div class="capacity-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <div class="capacity-details">
+                                <h4>Сады</h4>
+                                <div class="capacity-metrics">
+                                    <div class="metric">
+                                        <span class="metric-label">Площадь:</span>
+                                        <span class="metric-value">50 га</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Урожай:</span>
+                                        <span class="metric-value">150 т/год</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-label">Прибыль:</span>
+                                        <span class="metric-value">10,8 млн руб/год</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phase-processing">
+                    <h3>Развитие переработки</h3>
+                    <div class="processing-options">
+                        <div class="processing-card">
+                            <div class="card-icon">
+                                <i class="fas fa-wine-bottle"></i>
+                            </div>
+                            <h4>Переработка ягод</h4>
+                            <ul>
+                                <li>Варенье и джемы</li>
+                                <li>Соки и нектары</li>
+                                <li>Замороженные ягоды</li>
+                                <li>Сушеные ягоды</li>
+                            </ul>
+                        </div>
+                        <div class="processing-card">
+                            <div class="card-icon">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                            <h4>Переработка фруктов</h4>
+                            <ul>
+                                <li>Яблочный сок</li>
+                                <li>Сушеные фрукты</li>
+                                <li>Фруктовые пюре</li>
+                                <li>Консервированные фрукты</li>
+                            </ul>
+                        </div>
+                        <div class="processing-card">
+                            <div class="card-icon">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                            <h4>Переработка овощей</h4>
+                            <ul>
+                                <li>Овощные соки</li>
+                                <li>Замороженные овощи</li>
+                                <li>Консервированные овощи</li>
+                                <li>Овощные пюре</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resource Requirements -->
+    <section class="resource-requirements">
+        <div class="container">
+            <h2 class="section-title">Потребности в ресурсах</h2>
+            <div class="resources-content">
+                <div class="resource-chart">
+                    <canvas id="resourceChart"></canvas>
+                </div>
+                <div class="resource-details">
+                    <h3>Ключевые ресурсы</h3>
+                    <div class="resource-categories">
+                        <div class="resource-category">
+                            <h4>Финансовые ресурсы</h4>
+                            <ul>
+                                <li>Инвестиции: 28,5 млн руб</li>
+                                <li>Оборотный капитал: 138,7 млн руб</li>
+                                <li>Страховой фонд: 25,7 млн руб</li>
+                                <li>Резерв на риски: 5-6 млн руб</li>
+                            </ul>
+                        </div>
+                        <div class="resource-category">
+                            <h4>Человеческие ресурсы</h4>
+                            <ul>
+                                <li>Постоянный персонал: 24 человека</li>
+                                <li>Сезонный персонал: до 35 человек</li>
+                                <li>Квалифицированные специалисты</li>
+                                <li>Обучение и развитие</li>
+                            </ul>
+                        </div>
+                        <div class="resource-category">
+                            <h4>Технические ресурсы</h4>
+                            <ul>
+                                <li>Сельхозтехника и оборудование</li>
+                                <li>Система полива и водоснабжения</li>
+                                <li>Транспорт и логистика</li>
+                                <li>Система мониторинга</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics -->
+    <section class="success-metrics">
+        <div class="container">
+            <h2 class="section-title">Ключевые показатели успеха</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Финансовые показатели</h3>
+                    <div class="metric-value">130,0</div>
+                    <div class="metric-unit">млн руб прибыли за 5 лет</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Рентабельность</h3>
+                    <div class="metric-value">457</div>
+                    <div class="metric-unit">% ROI</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Социальный эффект</h3>
+                    <div class="metric-value">50+</div>
+                    <div class="metric-unit">рабочих мест</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Срок окупаемости</h3>
+                    <div class="metric-value">2-3</div>
+                    <div class="metric-unit">года</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to main -->
+    <section class="back-to-main">
+        <div class="container">
+            <div class="back-content">
+                <h3>Готовы начать реализацию?</h3>
+                <p>Изучите детальные финансовые расчеты и начните подготовку к реализации</p>
+                <div class="back-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        На главную
+                    </a>
+                    <a href="financial-details.html" class="btn btn-secondary">
+                        <i class="fas fa-chart-bar"></i>
+                        Детальные финансы
+                    </a>
+                    <a href="docs/business-plan.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i>
+                        Скачать бизнес-план
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Агрокомплекс в Старой Руссе</h4>
+                    <p>Высокорентабельное агропредприятие с ROI 457%</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="financial-details.html">Финансы</a></li>
+                        <li><a href="social-impact.html">Социальный эффект</a></li>
+                        <li><a href="risk-analysis.html">Анализ рисков</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="docs/business-plan.pdf" download>Бизнес-план PDF</a></li>
+                        <li><a href="presentation.html">Презентация</a></li>
+                        <li><a href="government.html">Для госструктур</a></li>
+                        <li><a href="investors.html">Для инвесторов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Агрокомплекс в Старой Руссе. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script>
+        // Initialize implementation plan charts
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Chart !== 'undefined') {
+                initImplementationPlanCharts();
+            }
+        });
+
+        function initImplementationPlanCharts() {
+            // Timeline Chart
+            const timelineCtx = document.getElementById('timelineChart');
+            if (timelineCtx) {
+                new Chart(timelineCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['2025', '2026', '2027', '2028', '2029', '2030'],
+                        datasets: [
+                            {
+                                label: 'Инвестиции (млн руб)',
+                                data: [0, 44.27, 3.0, 1.0, 1.7, 5.0],
+                                backgroundColor: '#2d5a27',
+                                borderColor: '#2d5a27',
+                                borderWidth: 1
+                            },
+                            {
+                                label: 'Прибыль (млн руб)',
+                                data: [0, -4.475, 25.295, 28.461, 37.911, 42.831],
+                                backgroundColor: '#10b981',
+                                borderColor: '#10b981',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + ' млн';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Resource Chart
+            const resourceCtx = document.getElementById('resourceChart');
+            if (resourceCtx) {
+                new Chart(resourceCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Инвестиции', 'Оборотный капитал', 'Страховой фонд'],
+                        datasets: [{
+                            data: [54.97, 138.72, 25.68],
+                            backgroundColor: ['#2d5a27', '#4a7c59', '#2563eb'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                        return context.label + ': ' + context.parsed + ' млн руб (' + percentage + '%)';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

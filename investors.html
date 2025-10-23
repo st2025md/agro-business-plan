@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для инвесторов | Агрокомплекс в Старой Руссе</title>
+    <meta name="description" content="Инвестиционная привлекательность проекта: ROI 457%, срок окупаемости 2-3 года">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/additional.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>Агрокомплекс</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="financial-details.html">Финансы</a></li>
+                <li><a href="social-impact.html">Социальный эффект</a></li>
+                <li><a href="risk-analysis.html">Анализ рисков</a></li>
+                <li><a href="implementation-plan.html">План реализации</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <span>Для инвесторов</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero investors-hero">
+        <div class="container">
+            <h1>Инвестиционная привлекательность</h1>
+            <p>Высокорентабельный проект с ROI 457% и сроком окупаемости 2-3 года</p>
+        </div>
+    </section>
+
+    <!-- Investment Highlights -->
+    <section class="investment-highlights">
+        <div class="container">
+            <h2 class="section-title">Ключевые инвестиционные показатели</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>ROI</h3>
+                    <div class="metric-value">457%</div>
+                    <div class="metric-unit">за 5 лет</div>
+                    <p>Возврат инвестиций за 5 лет</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Срок окупаемости</h3>
+                    <div class="metric-value">2-3</div>
+                    <div class="metric-unit">года</div>
+                    <p>Время возврата инвестиций</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="card-icon">
+                        <i class="fas fa-ruble-sign"></i>
+                    </div>
+                    <h3>Чистые инвестиции</h3>
+                    <div class="metric-value">28,5</div>
+                    <div class="metric-unit">млн руб</div>
+                    <p>С учетом субсидий 22,7 млн руб</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="card-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Рентабельность</h3>
+                    <div class="metric-value">26,0</div>
+                    <div class="metric-unit">млн руб/год</div>
+                    <p>Среднегодовая прибыль</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Performance -->
+    <section class="financial-performance">
+        <div class="container">
+            <h2 class="section-title">Финансовые показатели</h2>
+            <div class="performance-content">
+                <div class="performance-chart">
+                    <canvas id="financialPerformanceChart"></canvas>
+                </div>
+                <div class="performance-details">
+                    <h3>Ключевые финансовые показатели</h3>
+                    <div class="performance-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Общие инвестиции:</div>
+                            <div class="metric-value">28,5 млн руб</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Субсидии:</div>
+                            <div class="metric-value">22,7 млн руб</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Чистые инвестиции:</div>
+                            <div class="metric-value">5,8 млн руб</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Прибыль за 5 лет:</div>
+                            <div class="metric-value">130,0 млн руб</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">ROI:</div>
+                            <div class="metric-value">457%</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Срок окупаемости:</div>
+                            <div class="metric-value">2-3 года</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Structure -->
+    <section class="investment-structure">
+        <div class="container">
+            <h2 class="section-title">Структура инвестиций</h2>
+            <div class="structure-content">
+                <div class="structure-chart">
+                    <canvas id="investmentStructureChart"></canvas>
+                </div>
+                <div class="structure-details">
+                    <h3>Детализация инвестиций</h3>
+                    <div class="structure-breakdown">
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">Основные средства</div>
+                            <div class="breakdown-amount">14,7 млн руб</div>
+                            <div class="breakdown-percentage">32,4%</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">Сады (саженцы)</div>
+                            <div class="breakdown-amount">15,0 млн руб</div>
+                            <div class="breakdown-percentage">33,1%</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">Кустарники (саженцы)</div>
+                            <div class="breakdown-amount">10,57 млн руб</div>
+                            <div class="breakdown-percentage">23,3%</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">Клубника (рассада)</div>
+                            <div class="breakdown-amount">4,0 млн руб</div>
+                            <div class="breakdown-percentage">8,8%</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">Овощи (семена)</div>
+                            <div class="breakdown-amount">0 млн руб</div>
+                            <div class="breakdown-percentage">0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profit Analysis -->
+    <section class="profit-analysis">
+        <div class="container">
+            <h2 class="section-title">Анализ прибыльности</h2>
+            <div class="analysis-content">
+                <div class="analysis-chart">
+                    <canvas id="profitAnalysisChart"></canvas>
+                </div>
+                <div class="analysis-details">
+                    <h3>Прибыль по направлениям за 5 лет</h3>
+                    <div class="profit-breakdown">
+                        <div class="profit-item">
+                            <div class="profit-label">Клубника</div>
+                            <div class="profit-amount">66,6 млн руб</div>
+                            <div class="profit-percentage">51,2%</div>
+                        </div>
+                        <div class="profit-item">
+                            <div class="profit-label">Овощи</div>
+                            <div class="profit-amount">53,2 млн руб</div>
+                            <div class="profit-percentage">40,9%</div>
+                        </div>
+                        <div class="profit-item">
+                            <div class="profit-label">Кустарники</div>
+                            <div class="profit-amount">10,3 млн руб</div>
+                            <div class="profit-percentage">7,9%</div>
+                        </div>
+                        <div class="profit-item">
+                            <div class="profit-label">Сады</div>
+                            <div class="profit-amount">17,5 млн руб</div>
+                            <div class="profit-percentage">13,5%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Assessment -->
+    <section class="risk-assessment">
+        <div class="container">
+            <h2 class="section-title">Оценка рисков</h2>
+            <div class="risk-content">
+                <div class="risk-chart">
+                    <canvas id="riskAssessmentChart"></canvas>
+                </div>
+                <div class="risk-details">
+                    <h3>Уровни рисков</h3>
+                    <div class="risk-levels">
+                        <div class="risk-level low">
+                            <div class="risk-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="risk-info">
+                                <h4>Низкие риски</h4>
+                                <p>Субсидии покрывают 80% инвестиций</p>
+                                <ul>
+                                    <li>Государственная поддержка</li>
+                                    <li>Диверсификация направлений</li>
+                                    <li>Проверенные технологии</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="risk-level medium">
+                            <div class="risk-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="risk-info">
+                                <h4>Средние риски</h4>
+                                <p>Погодные условия и рыночные колебания</p>
+                                <ul>
+                                    <li>Страхование урожая</li>
+                                    <li>Долгосрочные контракты</li>
+                                    <li>Диверсификация сбыта</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="risk-level high">
+                            <div class="risk-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="risk-info">
+                                <h4>Высокие риски</h4>
+                                <p>Убыток в первый год -4,5 млн руб</p>
+                                <ul>
+                                    <li>Резервный фонд 5-6 млн руб</li>
+                                    <li>Кредитная линия 15 млн руб</li>
+                                    <li>Поэтапная реализация</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Opportunities -->
+    <section class="investment-opportunities">
+        <div class="container">
+            <h2 class="section-title">Инвестиционные возможности</h2>
+            <div class="opportunities-grid">
+                <div class="opportunity-card">
+                    <div class="card-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Быстрая окупаемость</h3>
+                    <p>Клубника и овощи начинают приносить прибыль со второго года</p>
+                    <ul>
+                        <li>Клубника: 150% рентабельность</li>
+                        <li>Овощи: 172% рентабельность</li>
+                        <li>Стабильная прибыль с первого года</li>
+                    </ul>
+                </div>
+                <div class="opportunity-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Высокая рентабельность</h3>
+                    <p>ROI 457% за 5 лет при низких рисках</p>
+                    <ul>
+                        <li>Среднегодовая прибыль 26 млн руб</li>
+                        <li>Максимальная прибыль 42,8 млн руб/год</li>
+                        <li>Стабильный рост прибыли</li>
+                    </ul>
+                </div>
+                <div class="opportunity-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Низкие риски</h3>
+                    <p>Государственная поддержка и диверсификация</p>
+                    <ul>
+                        <li>Субсидии 22,7 млн руб</li>
+                        <li>4 направления бизнеса</li>
+                        <li>Проверенные технологии</li>
+                    </ul>
+                </div>
+                <div class="opportunity-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Социальный эффект</h3>
+                    <p>Создание рабочих мест и развитие региона</p>
+                    <ul>
+                        <li>50+ рабочих мест</li>
+                        <li>Налоговые поступления 13,6 млн руб</li>
+                        <li>Развитие инфраструктуры</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Proposal -->
+    <section class="investment-proposal">
+        <div class="container">
+            <h2 class="section-title">Инвестиционное предложение</h2>
+            <div class="proposal-content">
+                <div class="proposal-highlights">
+                    <h3>Ключевые преимущества</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Высокая рентабельность</strong> - ROI 457% за 5 лет</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Низкие риски</strong> - субсидии покрывают 80% инвестиций</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Быстрая окупаемость</strong> - 2-3 года</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Диверсификация</strong> - 4 направления снижают риски</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Государственная поддержка</strong> - 22,7 млн руб субсидий</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Социальный эффект</strong> - 50+ рабочих мест</li>
+                    </ul>
+                </div>
+                <div class="proposal-financials">
+                    <h3>Финансовые показатели</h3>
+                    <div class="financial-metrics">
+                        <div class="financial-metric">
+                            <div class="metric-value">28,5</div>
+                            <div class="metric-unit">млн руб</div>
+                            <div class="metric-label">Чистые инвестиции</div>
+                        </div>
+                        <div class="financial-metric">
+                            <div class="metric-value">130,0</div>
+                            <div class="metric-unit">млн руб</div>
+                            <div class="metric-label">Прибыль за 5 лет</div>
+                        </div>
+                        <div class="financial-metric">
+                            <div class="metric-value">457</div>
+                            <div class="metric-unit">%</div>
+                            <div class="metric-label">ROI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to main -->
+    <section class="back-to-main">
+        <div class="container">
+            <div class="back-content">
+                <h3>Готовы к инвестированию?</h3>
+                <p>Изучите детальные финансовые расчеты и план реализации проекта</p>
+                <div class="back-actions">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        На главную
+                    </a>
+                    <a href="financial-details.html" class="btn btn-secondary">
+                        <i class="fas fa-chart-bar"></i>
+                        Детальные финансы
+                    </a>
+                    <a href="docs/business-plan.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i>
+                        Скачать бизнес-план
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Агрокомплекс в Старой Руссе</h4>
+                    <p>Высокорентабельное агропредприятие с ROI 457%</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="financial-details.html">Финансы</a></li>
+                        <li><a href="social-impact.html">Социальный эффект</a></li>
+                        <li><a href="risk-analysis.html">Анализ рисков</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="docs/business-plan.pdf" download>Бизнес-план PDF</a></li>
+                        <li><a href="presentation.html">Презентация</a></li>
+                        <li><a href="government.html">Для госструктур</a></li>
+                        <li><a href="implementation-plan.html">План реализации</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Агрокомплекс в Старой Руссе. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script>
+        // Initialize investors page charts
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof Chart !== 'undefined') {
+                initInvestorsCharts();
+            }
+        });
+
+        function initInvestorsCharts() {
+            // Financial Performance Chart
+            const financialPerformanceCtx = document.getElementById('financialPerformanceChart');
+            if (financialPerformanceCtx) {
+                new Chart(financialPerformanceCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2026', '2027', '2028', '2029', '2030'],
+                        datasets: [{
+                            label: 'Прибыль (млн руб)',
+                            data: [-4.475, 25.295, 28.461, 37.911, 42.831],
+                            borderColor: '#2d5a27',
+                            backgroundColor: '#2d5a2720',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#2d5a27',
+                            pointBorderColor: '#ffffff',
+                            pointBorderWidth: 2,
+                            pointRadius: 6,
+                            pointHoverRadius: 8
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: false,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + ' млн';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Investment Structure Chart
+            const investmentStructureCtx = document.getElementById('investmentStructureChart');
+            if (investmentStructureCtx) {
+                new Chart(investmentStructureCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Основные средства', 'Сады', 'Кустарники', 'Клубника'],
+                        datasets: [{
+                            data: [14.7, 15.0, 10.57, 4.0],
+                            backgroundColor: ['#2d5a27', '#4a7c59', '#2563eb', '#10b981'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                        const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                        return context.label + ': ' + context.parsed + ' млн руб (' + percentage + '%)';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Profit Analysis Chart
+            const profitAnalysisCtx = document.getElementById('profitAnalysisChart');
+            if (profitAnalysisCtx) {
+                new Chart(profitAnalysisCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Клубника', 'Овощи', 'Кустарники', 'Сады'],
+                        datasets: [{
+                            label: 'Прибыль за 5 лет (млн руб)',
+                            data: [66.556, 53.225, 10.273, 17.45],
+                            backgroundColor: ['#2d5a27', '#4a7c59', '#2563eb', '#10b981'],
+                            borderColor: ['#2d5a27', '#4a7c59', '#2563eb', '#10b981'],
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + ' млн';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Risk Assessment Chart
+            const riskAssessmentCtx = document.getElementById('riskAssessmentChart');
+            if (riskAssessmentCtx) {
+                new Chart(riskAssessmentCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Низкие риски', 'Средние риски', 'Высокие риски'],
+                        datasets: [{
+                            data: [60, 30, 10],
+                            backgroundColor: ['#10b981', '#f59e0b', '#ef4444'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.label + ': ' + context.parsed + '%';
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
